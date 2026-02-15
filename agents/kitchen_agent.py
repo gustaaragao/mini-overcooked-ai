@@ -1,7 +1,3 @@
-import sys
-import os
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-
 from aima3.agents import Agent
 from aima3.search import astar_search
 from problems.kitchen_problem import KitchenProblem
