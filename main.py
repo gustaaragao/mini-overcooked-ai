@@ -1,11 +1,11 @@
-from utils import load_kitchen_data, create_initial_state
+from utils.utils import load_kitchen_data, create_initial_state
 from env.kitchen_env import KitchenEnvironment
 from agents.kitchen_agent import KitchenAgent
 from problems.kitchen_problem import KitchenProblem
 
 def run():
     # 1. Carrega dados
-    layout, orders, max_steps = load_kitchen_data("map.json")
+    layout, orders, max_steps = load_kitchen_data("layouts/map.json")
     initial_state = create_initial_state(layout, orders)
     
     # 2. Inicializa Ambiente

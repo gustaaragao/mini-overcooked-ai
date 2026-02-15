@@ -1,6 +1,6 @@
 import json
 from typing import Tuple, List, Dict
-from models import Order, KitchenState
+from models.models import Order, KitchenState
 
 def load_kitchen_data(file_path: str) -> Tuple[List[str], List[Order], int]:
     with open(file_path, 'r') as f:

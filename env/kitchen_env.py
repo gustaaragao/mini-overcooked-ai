@@ -3,7 +3,7 @@ import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from aima3.agents import Environment
-from models import KitchenState
+from models.models import KitchenState
 
 class KitchenEnvironment(Environment):
     def __init__(self, initial_state: KitchenState):
