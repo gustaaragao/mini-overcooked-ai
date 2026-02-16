@@ -1,6 +1,6 @@
 from typing import List, Tuple
 
-from models.entities import Ingredient, Order
+from models.entities import Ingredient, Order, Plate, Extinguisher
 from models.states import KitchenState, StationState
 
 
@@ -16,13 +16,16 @@ def create_initial_state(layout: List[str], orders: List[Order]) -> KitchenState
             if char == "A":
                 agent_pos = (x, y)
                 row_list[x] = "."  # Agent starts on floor
-            elif char in ("S", "B", "K"):  # Stove, Cutting Board, Sink
+            elif char in ("S", "T", "B", "W"):  # Stove, Cutting Board (T/B), Sink (W)
                 stations_state_list.append(((x, y), StationState()))
-            elif char == "P":  # Initial Clean Plate
+            elif char == "P":  # Initial Clean Plate on Counter
                 grid_objects_list.append(
-                    ((x, y), Ingredient(name="Plate", state="clean"))
+                    ((x, y), Plate(state="CLEAN"))
                 )
                 row_list[x] = "C"  # Plates start on a counter
+            elif char == "E":  # Extinguisher on Counter
+                grid_objects_list.append(((x, y), Extinguisher()))
+                row_list[x] = "C"  # Extinguishers start on a counter
         clean_layout.append("".join(row_list))
 
     return KitchenState(

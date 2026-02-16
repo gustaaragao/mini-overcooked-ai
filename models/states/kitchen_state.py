@@ -1,16 +1,17 @@
-from typing import NamedTuple, Optional, Tuple
+from typing import NamedTuple, Optional, Tuple, Union
 
-from models.entities.order import Order
-from models.entities.ingredient import Ingredient
+from models.entities import Order, Ingredient, Plate, Extinguisher
 from models.states.station_state import StationState
+
+KitchenItem = Union[Ingredient, Plate, Extinguisher]
 
 
 class KitchenState(NamedTuple):
     agent_pos: Tuple[int, int]
-    held_item: Optional[Ingredient] # can be None
+    held_item: Optional[KitchenItem] # can be None
     layout: Tuple[str, ...] # Armazena o grid estático (W, ., C, D, etc)
-    # Representado como ((x, y), Ingredient) para itens dinâmicos sobre bancadas
-    grid_objects: Tuple[Tuple[Tuple[int, int], Ingredient], ...]
+    # Representado como ((x, y), KitchenItem) para itens dinâmicos sobre bancadas
+    grid_objects: Tuple[Tuple[Tuple[int, int], KitchenItem], ...]
     active_orders: Tuple[Order, ...]
     delivered_orders: Tuple[Order, ...]
     # Mapeamento de (x, y) para estado da estação (fogão, tábua de corte)

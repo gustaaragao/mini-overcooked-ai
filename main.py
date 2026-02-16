@@ -14,8 +14,8 @@ def run():
     env = KitchenEnvironment(initial_state)
     
     # 3. Inicializa o Agente com sua Heurística
-    temp_problem = KitchenProblem(initial_state)
-    agent = KitchenAgent(heuristic=temp_problem.h)
+    problem = KitchenProblem(initial_state)
+    agent = KitchenAgent(heuristic=problem.h)
     
     # Adicionamos o agente ao ambiente
     env.add_thing(agent)
