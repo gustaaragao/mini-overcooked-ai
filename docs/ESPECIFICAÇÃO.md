@@ -1,14 +1,25 @@
+
 # Especificação Formal do Problema
 
+## 0. Simplificações
+- Não podemos remover a panela do fogão. (Posso remover essa simplificação)
+- Os mapas são iguais ao do jogo original, exceto por dois pontos:
+    - Apenas um cozinheiro --> Apenas um agente
+    - Sem obstáculos
+- A fila de pedidos é simplificada.
+
 ## 1. Ambiente
-O ambiente é uma grade 2D representando uma cozinha. Cada célula pode conter:
+O ambiente é uma grade 2D representando uma cozinha. Cada célula pode conter (ou ser):
+
 - `.` : Chão (passável)
-- `W` : Parede (impasável)
+- `#` : Parede (impasável)
 - `C` : Balcão (armazenamento e fonte de ingredientes)
 - `S` : Fogão (cozimento)
 - `T` : Tábua de Corte (preparação)
 - `D` : Entrega
-- `E` : Estação de Extintor
+- `G` : Lixeira
+- `E` : Balcão com Extintor
+- `P` : Balcão com Prato (Sujo ou Limpo) --> TODO: Criar um model (Plate) para o prato
 
 ## 2. Estado Inicial
 Definido via arquivos JSON em `layouts/`, contendo a posição inicial do agente, o layout do grid, e a lista de pedidos (`active_orders`).
@@ -45,7 +56,6 @@ Verdadeiro quando `active_orders` está vazio.
 
 # Algoritmos de Busca e Heurística
 - **A* Search**: Utilizado para encontrar o plano ótimo.
-- **K-Depth Lookahead**: Utilizado em estados de alta complexidade para garantir decisões em tempo hábil.
 
 ## Heurísticas
 A heurística $h(n)$ combina distância de Manhattan com custo de processamento:

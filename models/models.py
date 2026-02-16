@@ -8,7 +8,8 @@ class Order(NamedTuple):
 
 class Ingredient(NamedTuple):
     name: str
-    state: str = "raw" # raw, chopped, cooked, burnt
+    state: str = "raw" # raw, chopped, cooked, burnt, clean, dirty
+    contents: Tuple[str, ...] = ()
 
 class StationState(NamedTuple):
     progress: int = 0
@@ -27,6 +28,33 @@ class KitchenState(NamedTuple):
     stations_state: Tuple[Tuple[Tuple[int, int], StationState], ...]
     time: int = 0
 
+    def _search_key(self):
+        """Key used for hashing/equality in search.
+
+        The simulator uses `time` for rendering and logs, but including it in
+        the state identity makes every step unique and prevents cycle
+        detection in graph search (A*, UCS, etc.). For planning we want the
+        state identity to depend on the physical configuration, not the tick
+        counter.
+        """
+        return (
+            self.agent_pos,
+            self.held_item,
+            self.layout,
+            self.grid_objects,
+            self.active_orders,
+            self.delivered_orders,
+            self.stations_state,
+        )
+
+    def __hash__(self):
+        return hash(self._search_key())
+
+    def __eq__(self, other):
+        if not isinstance(other, KitchenState):
+            return False
+        return self._search_key() == other._search_key()
+
     def get_layout_at(self, x: int, y: int) -> str:
         if 0 <= y < len(self.layout) and 0 <= x < len(self.layout[0]):
             return self.layout[y][x]
@@ -43,3 +71,10 @@ class KitchenState(NamedTuple):
             if s_pos == pos:
                 return s_state
         return None
+
+    def is_impassable(self, x: int, y: int) -> bool:
+        """Returns True if the cell is impassable for movement (anything not floor '.')."""
+        return self.get_layout_at(x, y) != '.'
+
+    def __lt__(self, other):
+        return self.time < other.time

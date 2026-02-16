@@ -1,20 +1,25 @@
 {
+  
   "layout": [
-    "WWWWWWWW",
-    "W.T.T.DW",
-    "W......W",
-    "WS.A..CW",
-    "W......W",
-    "W.C.E.CW",
-    "WWWWWWWW"
+    "###############",
+    "#CCCOCCCCSCCCC#",
+    "#C...........E#",
+    "#C...........C#",
+    "#C...........W#",
+    "#CCCCCCCCCC..W#",
+    "#............C#",
+    "#D...........C#",
+    "#D...........G#",
+    "#CCCTCTCCCPPCC#",
+    "###############"
   ],
   "orders": [
     {
       "ingredients": ["Onion"],
       "instant": 0,
-      "duration": 20,
+      "duration": 50,
       "score": 10
     }
   ],
-  "max_steps": 50
+  "max_steps": 100
 }
