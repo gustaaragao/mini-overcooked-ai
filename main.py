@@ -5,7 +5,7 @@ from problems.kitchen_problem import KitchenProblem
 
 def run():
     # 1. Carrega dados
-    layout, orders, max_steps = load_kitchen_data("layouts/map.json")
+    layout, orders, max_steps = load_kitchen_data("layouts/overcooked1.json")
     initial_state = create_initial_state(layout, orders)
     
     # 2. Inicializa Ambiente

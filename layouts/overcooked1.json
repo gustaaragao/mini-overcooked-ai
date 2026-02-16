@@ -1,0 +1,20 @@
+{
+  "layout": [
+    "WWWWWWWW",
+    "W.T.T.DW",
+    "W......W",
+    "WS.A..CW",
+    "W......W",
+    "W.C.E.CW",
+    "WWWWWWWW"
+  ],
+  "orders": [
+    {
+      "ingredients": ["Onion"],
+      "instant": 0,
+      "duration": 20,
+      "score": 10
+    }
+  ],
+  "max_steps": 50
+}

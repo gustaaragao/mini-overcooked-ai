@@ -1,7 +1,11 @@
 import re
 from aima3.search import Problem
-from models.models import KitchenState, Order
+from models.models import KitchenState, Order, Ingredient, StationState
 from typing import List, Tuple, Optional
+
+CHOP_DURATION = 3
+COOK_DURATION = 5
+BURN_LIMIT = 10
 
 class KitchenProblem(Problem):
     def __init__(self, initial: KitchenState, goal_orders: List[Order] = None):
@@ -12,32 +16,55 @@ class KitchenProblem(Problem):
         possible_actions = []
         x, y = state.agent_pos
         
-        # 1. Movimentação (Apenas para o chão '.')
+        # 1. Movimentação
         for dx, dy in [(0, 1), (0, -1), (1, 0), (-1, 0)]:
             nx, ny = x + dx, y + dy
             if state.get_layout_at(nx, ny) == '.':
                 possible_actions.append(f"Move({nx}, {ny})")
             
         # 2. Interações com Estações Adjacentes
-        # Checa as 4 direções adjacentes para ver se há uma estação
         for dx, dy in [(0, 1), (0, -1), (1, 0), (-1, 0)]:
             sx, sy = x + dx, y + dy
             tile = state.get_layout_at(sx, sy)
             
-            if tile in ('C', 'S', 'D', 'K'): # Counter, Stove, Delivery, Sink
-                # Lógica simplificada de interação
-                if state.held_item == "":
-                    # Se o balcão tiver algo (grid_objects), pode pegar
-                    obj_on_tile = state.get_object_at((sx, sy))
-                    if obj_on_tile:
-                        possible_actions.append(f"PickUp({obj_on_tile}, {sx}, {sy})")
-                    elif tile == 'C': # Se for balcão vazio, talvez tenha ingredientes infinitos (exemplo)
-                        possible_actions.append(f"PickUp(Onion, {sx}, {sy})")
-                else:
-                    possible_actions.append(f"PutDown({state.held_item}, {sx}, {sy})")
+            if tile in ('C', 'S', 'T', 'D', 'K', 'E'): # E for Extinguisher Station
+                obj_on_tile = state.get_object_at((sx, sy))
+                station_state = state.get_station_state_at((sx, sy))
                 
-                if tile == 'D' and state.held_item != "":
-                    possible_actions.append(f"Deliver({sx}, {sy})")
+                if station_state and station_state.is_on_fire:
+                    if state.held_item and state.held_item.name == "Extinguisher":
+                        possible_actions.append(f"Extinguish({sx}, {sy})")
+                    continue
+
+                if state.held_item is None:
+                    if obj_on_tile:
+                        possible_actions.append(f"PickUp({obj_on_tile.name}, {obj_on_tile.state}, {sx}, {sy})")
+                    elif tile == 'C':
+                        possible_actions.append(f"PickUp(Onion, raw, {sx}, {sy})")
+                    elif tile == 'E':
+                        possible_actions.append(f"PickUp(Extinguisher, tool, {sx}, {sy})")
+                    elif tile == 'S' or tile == 'T':
+                        if station_state and station_state.content:
+                            possible_actions.append(f"PickUp({station_state.content.name}, {station_state.content.state}, {sx}, {sy})")
+                else:
+                    if tile == 'C' and obj_on_tile is None:
+                        possible_actions.append(f"PutDown({state.held_item.name}, {state.held_item.state}, {sx}, {sy})")
+                    elif (tile == 'S' or tile == 'T') and station_state and station_state.content is None:
+                        if tile == 'T' and state.held_item.state == 'raw':
+                            possible_actions.append(f"PutDown({state.held_item.name}, {state.held_item.state}, {sx}, {sy})")
+                        elif tile == 'S' and state.held_item.state == 'chopped':
+                            possible_actions.append(f"PutDown({state.held_item.name}, {state.held_item.state}, {sx}, {sy})")
+                    elif tile == 'E' and state.held_item.name == "Extinguisher":
+                        possible_actions.append(f"PutDown(Extinguisher, tool, {sx}, {sy})")
+
+                    if tile == 'D' and state.held_item.state == 'cooked':
+                        possible_actions.append(f"Deliver({sx}, {sy})")
+
+                if tile == 'T' and station_state and station_state.content and station_state.content.state == 'raw':
+                    possible_actions.append(f"Chop({sx}, {sy})")
+                
+                if tile == 'S' and station_state and station_state.content and station_state.content.state == 'chopped':
+                    possible_actions.append(f"Wait({sx}, {sy})")
 
         return possible_actions
 
@@ -53,26 +80,55 @@ class KitchenProblem(Problem):
         new_grid_objects = list(state.grid_objects)
         new_delivered_orders = list(state.delivered_orders)
         new_active_orders = list(state.active_orders)
+        new_stations_state = {pos: s_state for pos, s_state in state.stations_state}
         
         if act_name == "Move":
             new_agent_pos = (int(params[0]), int(params[1]))
-            
         elif act_name == "PickUp":
-            new_held_item = params[0]
-            # Remove do grid se estava lá
-            pos = (int(params[1]), int(params[2]))
+            new_held_item = Ingredient(name=params[0], state=params[1])
+            pos = (int(params[2]), int(params[3]))
             new_grid_objects = [obj for obj in new_grid_objects if obj[0] != pos]
-            
+            if pos in new_stations_state:
+                new_stations_state[pos] = StationState(progress=0, content=None)
         elif act_name == "PutDown":
-            pos = (int(params[1]), int(params[2]))
-            new_grid_objects.append((pos, new_held_item))
-            new_held_item = ""
-            
+            pos = (int(params[2]), int(params[3]))
+            tile = state.get_layout_at(pos[0], pos[1])
+            if tile == 'C' or tile == 'E':
+                new_grid_objects.append((pos, new_held_item))
+            elif tile in ('S', 'T'):
+                new_stations_state[pos] = StationState(progress=0, content=new_held_item)
+            new_held_item = None
         elif act_name == "Deliver":
             if new_active_orders:
                 order_delivered = new_active_orders.pop(0)
                 new_delivered_orders.append(order_delivered)
-                new_held_item = ""
+                new_held_item = None
+        elif act_name == "Chop":
+            pos = (int(params[0]), int(params[1]))
+            s_state = new_stations_state[pos]
+            new_progress = s_state.progress + 1
+            new_content = s_state.content
+            if new_progress >= CHOP_DURATION:
+                new_content = Ingredient(name=s_state.content.name, state='chopped')
+                new_progress = 0
+            new_stations_state[pos] = StationState(progress=new_progress, content=new_content)
+        elif act_name == "Extinguish":
+            pos = (int(params[0]), int(params[1]))
+            new_stations_state[pos] = StationState(progress=0, is_on_fire=False, content=None)
+
+        # Global progress
+        for pos, s_state in new_stations_state.items():
+            tile = state.get_layout_at(pos[0], pos[1])
+            if tile == 'S' and s_state.content and s_state.content.state == 'chopped':
+                new_progress = s_state.progress + 1
+                new_content = s_state.content
+                new_fire = s_state.is_on_fire
+                if new_progress >= COOK_DURATION:
+                    new_content = Ingredient(name=s_state.content.name, state='cooked')
+                if new_progress >= BURN_LIMIT:
+                    new_content = Ingredient(name=s_state.content.name, state='burnt')
+                    new_fire = True
+                new_stations_state[pos] = StationState(progress=new_progress, content=new_content, is_on_fire=new_fire)
 
         return KitchenState(
             agent_pos=new_agent_pos,
@@ -81,36 +137,68 @@ class KitchenProblem(Problem):
             grid_objects=tuple(new_grid_objects),
             active_orders=tuple(new_active_orders),
             delivered_orders=tuple(new_delivered_orders),
+            stations_state=tuple(new_stations_state.items()),
             time=state.time + 1
         )
 
-    def goal_test(self, state: KitchenState) -> bool:
-        return len(state.active_orders) == 0
+    def path_cost(self, c, state1, action, state2):
+        # Penaliza o 'Wait' levemente para incentivar outras ações se possível
+        if "Wait" in action:
+            return c + 1.1
+        return c + 1
 
     def h(self, node):
-        """
-        Heurística: Manhattan Distance.
-        Se não segura nada: vai até o ingrediente mais próximo (Counter 'C').
-        Se segura algo: vai até a entrega ('D').
-        """
         state = node.state
         if not state.active_orders: return 0
         
         ax, ay = state.agent_pos
         targets = []
+        extra_cost = 0
         
+        # Prioridade: Fogo
+        for pos, s_state in state.stations_state:
+            if s_state.is_on_fire:
+                if state.held_item and state.held_item.name == "Extinguisher":
+                    targets.append(pos)
+                else:
+                    for y, row in enumerate(state.layout):
+                        for x, char in enumerate(row):
+                            if char == 'E': targets.append((x, y))
+                if targets: 
+                    return min(abs(ax - tx) + abs(ay - ty) for tx, ty in targets)
+
         if state.held_item:
-            # Procura estações de entrega 'D'
-            for y, row in enumerate(state.layout):
-                for x, char in enumerate(row):
-                    if char == 'D': targets.append((x, y))
+            if state.held_item.name == "Extinguisher":
+                for y, row in enumerate(state.layout):
+                    for x, char in enumerate(row):
+                        if char == 'E': targets.append((x, y))
+            elif state.held_item.state == 'cooked':
+                for y, row in enumerate(state.layout):
+                    for x, char in enumerate(row):
+                        if char == 'D': targets.append((x, y))
+            elif state.held_item.state == 'raw':
+                for y, row in enumerate(state.layout):
+                    for x, char in enumerate(row):
+                        if char == 'T': targets.append((x, y))
+                extra_cost = CHOP_DURATION
+            elif state.held_item.state == 'chopped':
+                for y, row in enumerate(state.layout):
+                    for x, char in enumerate(row):
+                        if char == 'S': targets.append((x, y))
+                extra_cost = COOK_DURATION
         else:
-            # Procura balcões 'C'
+            # Procura ingredientes ou progresso nas estações
             for y, row in enumerate(state.layout):
                 for x, char in enumerate(row):
                     if char == 'C': targets.append((x, y))
+            for pos, s_state in state.stations_state:
+                if s_state.content:
+                    targets.append(pos)
+                    # Se pegar algo que precisa processar, adiciona o custo
+                    if s_state.content.state == 'raw': extra_cost = max(extra_cost, CHOP_DURATION - s_state.progress)
+                    elif s_state.content.state == 'chopped': extra_cost = max(extra_cost, COOK_DURATION - s_state.progress)
         
         if not targets: return 10
         
-        # Retorna a menor distância de Manhattan até um alvo
-        return min(abs(ax - tx) + abs(ay - ty) for tx, ty in targets)
+        dist = min(abs(ax - tx) + abs(ay - ty) for tx, ty in targets)
+        return dist + extra_cost

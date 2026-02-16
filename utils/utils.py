@@ -1,6 +1,6 @@
 import json
-from typing import Tuple, List, Dict
-from models.models import Order, KitchenState
+from typing import Tuple, List, Dict, Optional
+from models.models import Order, KitchenState, Ingredient, StationState
 
 def load_kitchen_data(file_path: str) -> Tuple[List[str], List[Order], int]:
     with open(file_path, 'r') as f:
@@ -24,21 +24,27 @@ def load_kitchen_data(file_path: str) -> Tuple[List[str], List[Order], int]:
 def create_initial_state(layout: List[str], orders: List[Order]) -> KitchenState:
     agent_pos = (0, 0)
     clean_layout = []
+    stations_state_list = []
     
     for y, row in enumerate(layout):
-        if 'A' in row:
-            agent_pos = (row.find('A'), y)
-            # Substitui 'A' por '.' no layout estático para o agente poder se mover
-            clean_layout.append(row.replace('A', '.'))
-        else:
-            clean_layout.append(row)
+        row_list = list(row)
+        for x, char in enumerate(row_list):
+            if char == 'A':
+                agent_pos = (x, y)
+                row_list[x] = '.' # Substitui 'A' por '.' no layout estático
+            elif char == 'S': # Stove
+                stations_state_list.append(((x, y), StationState()))
+            elif char == 'T': # Cutting Table (Tábua)
+                stations_state_list.append(((x, y), StationState()))
+        clean_layout.append("".join(row_list))
     
     return KitchenState(
         agent_pos=agent_pos,
-        held_item="",
+        held_item=None,
         layout=tuple(clean_layout),
         grid_objects=(), # Itens dinâmicos começam vazios
         active_orders=tuple(orders),
         delivered_orders=(),
+        stations_state=tuple(stations_state_list),
         time=0
     )
