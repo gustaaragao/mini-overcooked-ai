@@ -1,5 +1,5 @@
 from aima3.agents import Environment
-from models.models import KitchenState
+from models.states import KitchenState
 
 class KitchenEnvironment(Environment):
     def __init__(self, initial_state: KitchenState):

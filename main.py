@@ -1,5 +1,5 @@
 import sys
-from utils.utils import load_kitchen_data, create_initial_state
+from utils import load_kitchen_data, create_initial_state
 from env.kitchen_env import KitchenEnvironment
 from agents.kitchen_agent import KitchenAgent
 from problems.kitchen_problem import KitchenProblem

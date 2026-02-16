@@ -1,20 +1,9 @@
-from typing import Tuple, Optional, NamedTuple, Dict
+from typing import NamedTuple, Optional, Tuple
 
-class Order(NamedTuple):
-    ingredients: Tuple[str, ...]
-    instant: int
-    duration: int
-    score: int
+from models.entities.order import Order
+from models.entities.ingredient import Ingredient
+from models.states.station_state import StationState
 
-class Ingredient(NamedTuple):
-    name: str
-    state: str = "raw" # raw, chopped, cooked, burnt, clean, dirty
-    contents: Tuple[str, ...] = ()
-
-class StationState(NamedTuple):
-    progress: int = 0
-    is_on_fire: bool = False
-    content: Optional[Ingredient] = None
 
 class KitchenState(NamedTuple):
     agent_pos: Tuple[int, int]

@@ -1,6 +1,7 @@
 import re
 from aima3.search import Problem
-from models.models import KitchenState, Order, Ingredient, StationState
+from models.entities import Ingredient, Order
+from models.states import KitchenState, StationState
 from typing import List, Tuple, Optional
 
 CHOP_DURATION = 3
