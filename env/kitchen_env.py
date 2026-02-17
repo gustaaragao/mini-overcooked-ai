@@ -7,6 +7,7 @@ class KitchenEnvironment(Environment):
         self.state = initial_state
         self.height = len(initial_state.layout)
         self.width = len(initial_state.layout[0])
+        self.history = [] # List of (state, action) tuples
 
     def thing_classes(self):
         return []
@@ -16,15 +17,19 @@ class KitchenEnvironment(Environment):
 
     def execute_action(self, agent, action):
         from problems.kitchen_problem import KitchenProblem
+        prev_state = self.state
         if action:
             problem = KitchenProblem(self.state)
             self.state = problem.result(self.state, action)
         else:
             # Incrementa o tempo mesmo sem ação para evitar loops infinitos
             self.state = self.state._replace(time=self.state.time + 1)
+        
+        self.history.append((prev_state, action))
 
-    def render(self):
+    def render(self, out=None, quiet: bool = False) -> str:
         from models.entities import Ingredient, Plate, Extinguisher
+        # ... (rest of the render method)
         # Cria cópia do layout para renderização
         render_grid = [list(row) for row in self.state.layout]
         
@@ -64,15 +69,16 @@ class KitchenEnvironment(Environment):
         else:
             holding_str = 'Nothing'
 
-        print(f"\nTime: {self.state.time} | Holding: {holding_str}")
-        print("+" + "---" * self.width + "+")
+        lines = []
+        lines.append(f"\nTime: {self.state.time} | Holding: {holding_str}")
+        lines.append("+" + "---" * self.width + "+")
         for row in render_grid:
-            print("| " + "  ".join(row) + " |")
-        print("+" + "---" * self.width + "+")
-        
+            lines.append("| " + "  ".join(row) + " |")
+        lines.append("+" + "---" * self.width + "+")
+
         if self.state.active_orders:
-            print("Active Orders:", [", ".join(o.ingredients) for o in self.state.active_orders])
-        
+            lines.append("Active Orders: " + str([", ".join(o.ingredients) for o in self.state.active_orders]))
+
         # Mostra detalhes das estações
         for pos, s_state in self.state.stations_state:
             if s_state.content or s_state.is_on_fire:
@@ -86,4 +92,11 @@ class KitchenEnvironment(Environment):
                 else:
                     content_str = "EMPTY"
                 fire_str = "!!! ON FIRE !!!" if s_state.is_on_fire else ""
-                print(f"  Station at {pos}: {content_str} | Progress: {s_state.progress} {fire_str}")
+                lines.append(f"  Station at {pos}: {content_str} | Progress: {s_state.progress} {fire_str}")
+
+        rendered = "\n".join(lines) + "\n"
+        if out is not None:
+            out.write(rendered)
+        if not quiet:
+            print(rendered, end="")
+        return rendered

@@ -10,14 +10,19 @@ BURN_LIMIT = 10
 WASH_DURATION = 2
 
 class KitchenProblem(Problem):
-    def __init__(self, initial: KitchenState, goal_orders: List[Order] = None):
+    def __init__(self, initial: KitchenState, goal_orders: List[Order] = None, on_transition=None, goal_test_fn=None):
         super().__init__(initial)
         self.goal_orders = goal_orders
+        self.on_transition = on_transition
+        self.goal_test_fn = goal_test_fn
 
     def goal_test(self, state: KitchenState) -> bool:
+        if self.goal_test_fn:
+            return self.goal_test_fn(state)
         return len(state.active_orders) == 0
 
     def actions(self, state: KitchenState) -> List[str]:
+        # ... (no changes in actions)
         possible_actions = []
         x, y = state.agent_pos
         

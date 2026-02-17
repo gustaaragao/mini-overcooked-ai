@@ -27,14 +27,20 @@ class KitchenState(NamedTuple):
         state identity to depend on the physical configuration, not the tick
         counter.
         """
+        # Sort objects by position to ensure canonical representation
+        # grid_objects is ((pos, item), ...)
+        sorted_objects = tuple(sorted(self.grid_objects, key=lambda x: x[0]))
+        # stations_state is ((pos, s_state), ...)
+        sorted_stations = tuple(sorted(self.stations_state, key=lambda x: x[0]))
+
         return (
             self.agent_pos,
             self.held_item,
             self.layout,
-            self.grid_objects,
+            sorted_objects,
             self.active_orders,
             self.delivered_orders,
-            self.stations_state,
+            sorted_stations,
         )
 
     def __hash__(self):
