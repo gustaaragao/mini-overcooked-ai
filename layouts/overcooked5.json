@@ -1,0 +1,25 @@
+{
+  
+  "layout": [
+    "################",
+    "######C.DDEC####",
+    "#COOOCA...CWWCC#",
+    "#C............G#",
+    "#C.CCCCCCCCCC.C#",
+    "#C.C########C.C#",
+    "#C.C########C.C#",
+    "#C.CCCCCCCPPP.C#",
+    "#C............C#",
+    "#CTCTCCCCSCSCSC#",
+    "################"
+  ],
+  "orders": [
+    {
+      "ingredients": ["Onion"],
+      "instant": 0,
+      "duration": 50,
+      "score": 10
+    }
+  ],
+  "max_steps": 100
+}
