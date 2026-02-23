@@ -47,6 +47,38 @@ def astar_search_with_limit(problem, h, max_expansions=50000, max_time_s=5.0):
                 
     return None
 
+def greedy_best_first_search(problem, h):
+    """Greedy Best-First Search (sem limites)."""
+    
+    node = Node(problem.initial)
+
+    if problem.goal_test(node.state):
+        return node
+
+    frontier = []
+    push_count = 0
+
+    heapq.heappush(frontier, (h(node), push_count, node))
+
+    explored = set()
+
+    while frontier:
+        hv, _, node = heapq.heappop(frontier)
+
+        if problem.goal_test(node.state):
+            return node
+
+        if node.state in explored:
+            continue
+
+        explored.add(node.state)
+
+        for child in node.expand(problem):
+            if child.state not in explored:
+                push_count += 1
+                heapq.heappush(frontier, (h(child), push_count, child))
+
+    return None
 
 class KitchenAgent(Agent):
     def __init__(self, heuristic):
