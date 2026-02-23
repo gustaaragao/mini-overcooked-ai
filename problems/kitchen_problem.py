@@ -347,8 +347,6 @@ class KitchenProblem(Problem):
         
         if isinstance(held, Extinguisher) and held is not None:
             return min(abs(ax - tx) + abs(ay - ty) for tx, ty in extinguishers) 
-
-        #ORGANIZANDO
         
         #caso 1 prato sujo na mao: limpa 
 
