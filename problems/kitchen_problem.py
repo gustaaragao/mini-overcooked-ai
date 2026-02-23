@@ -267,92 +267,245 @@ class KitchenProblem(Problem):
         if not state.active_orders: return 0
         
         ax, ay = state.agent_pos
-        targets = []
-        extra_cost = 0
-        progress_bonus = 0
+        held = state.held_item
+        cost = 0
         
-        # Fire Priority
-        for pos, s_state in state.stations_state:
-            if s_state.is_on_fire:
-                if isinstance(state.held_item, Extinguisher):
-                    targets.append(pos)
-                else:
-                    for y, row in enumerate(state.layout):
-                        for x, char in enumerate(row):
-                            if char == 'E': targets.append((x, y))
-                            elif state.get_object_at((x, y)) and isinstance(state.get_object_at((x, y)), Extinguisher):
-                                targets.append((x, y))
-                if targets: 
-                    return min(abs(ax - tx) + abs(ay - ty) for tx, ty in targets)
+        #varredura de pontos de interesse pra agilizar
+        
+        chop_stations = [] 
+        stoves = [] 
+        deliveries = [] 
+        sinks = [] 
+        extinguishers = [] 
+        plates_clean = [] 
+        plates_dirty = [] 
+        cooked_food = [] 
+        chopped_food = [] 
+        raw_sources = [] 
+        
+        for y, row in enumerate(state.layout): 
+            for x, char in enumerate(row): 
+                pos = (x, y) 
+                if char == 'T': 
+                    chop_stations.append(pos) 
+                elif char == 'S': 
+                    stoves.append(pos) 
+                elif char == 'D': 
+                    deliveries.append(pos) 
+                elif char == 'W': 
+                    sinks.append(pos) 
+                elif char == 'E': 
+                    extinguishers.append(pos) 
+                elif char == 'O': 
+                    raw_sources.append(pos) 
+                
+        for pos, obj in state.grid_objects: 
+            if isinstance(obj, Plate) and obj.state == "CLEAN": 
+                plates_clean.append(pos)
+            if isinstance(obj, Plate) and obj.state == "DIRTY": 
+                plates_dirty.append(pos) 
+            if isinstance(obj, Ingredient): 
+                if obj.state == "COOKED": 
+                    cooked_food.append(pos) 
+                elif obj.state == "CHOPPED": 
+                    chopped_food.append(pos)  
+        
+        for pos, st in state.stations_state: 
+            if st.content: 
+                obj = st.content 
+                if isinstance(obj, Plate) and obj.state == "CLEAN": 
+                    plates_clean.append(pos)
+                if isinstance(obj, Plate) and obj.state == "DIRTY": 
+                    plates_dirty.append(pos)
+                if isinstance(obj, Ingredient): 
+                    if obj.state == "COOKED": 
+                        cooked_food.append(pos)
+                    elif obj.state == "CHOPPED": 
+                        chopped_food.append(pos)
+        
+        #incendio: pegar extintor (se nao tiver) -> apagar
+        
+        fire_positions = [pos for pos, st in state.stations_state if st.is_on_fire] 
+        
+        if fire_positions: 
+            if isinstance(held, Extinguisher): 
+                return min(abs(ax - tx) + abs(ay - ty) for tx, ty in fire_positions) 
+            else: 
+                best = float("inf")
 
-        if state.held_item:
-            held = state.held_item
-            if isinstance(held, Extinguisher):
-                # Return it if no fire? For now just go to an E counter
-                for y, row in enumerate(state.layout):
-                    for x, char in enumerate(row):
-                        if char == 'E': targets.append((x, y))
-            elif isinstance(held, Plate):
-                progress_bonus = 10
-                if held.state == "DIRTY":
-                    for y, row in enumerate(state.layout):
-                        for x, char in enumerate(row):
-                            if char == 'W': targets.append((x, y))
-                    extra_cost = WASH_DURATION
-                elif held.state == "CLEAN":
-                    if held.contents:
-                        progress_bonus = 30
-                        for y, row in enumerate(state.layout):
-                            for x, char in enumerate(row):
-                                if char == 'D': targets.append((x, y))
-                    else:
-                        for pos, s_state in state.stations_state:
-                            if s_state.content and isinstance(s_state.content, Ingredient) and s_state.content.state in ('COOKED', 'CHOPPED'):
-                                targets.append(pos)
-                        if not targets:
-                            for y, row in enumerate(state.layout):
-                                for x, char in enumerate(row):
-                                    if char == 'C' and state.get_object_at((x, y)) is None:
-                                        targets.append((x, y))
-                elif held.state == "WITH_FOOD":
-                    progress_bonus = 40
-                    for y, row in enumerate(state.layout):
-                        for x, char in enumerate(row):
-                            if char == 'D': targets.append((x, y))
-            elif isinstance(held, Ingredient):
-                if held.state == 'COOKED':
-                    progress_bonus = 25
-                    for pos, obj in state.grid_objects:
-                        if isinstance(obj, Plate) and obj.state == "CLEAN": targets.append(pos)
-                    if not targets:
-                        for pos, s_state in state.stations_state:
-                            if isinstance(s_state.content, Plate) and s_state.content.state == "CLEAN":
-                                targets.append(pos)
-                elif held.state == 'RAW':
-                    progress_bonus = 5
-                    for y, row in enumerate(state.layout):
-                        for x, char in enumerate(row):
-                            if char in ('T', 'B'): targets.append((x, y))
-                    extra_cost = CHOP_DURATION
-                elif held.state == 'CHOPPED':
-                    progress_bonus = 15
-                    for y, row in enumerate(state.layout):
-                        for x, char in enumerate(row):
-                            if char == 'S': targets.append((x, y))
-                    extra_cost = COOK_DURATION
-        else:
-            # Holding nothing
-            cooked_exists = any(s.content and isinstance(s.content, Ingredient) and s.content.state == 'COOKED' for _, s in state.stations_state)
-            if cooked_exists:
-                for pos, obj in state.grid_objects:
-                    if isinstance(obj, Plate) and obj.state == "CLEAN": targets.append(pos)
+                for (ex, ey) in extinguishers:
+                    for (fx, fy) in fire_positions:
+                        cost = (
+                            abs(ax - ex) + abs(ay - ey) +  
+                            abs(ex - fx) + abs(ey - fy)  
+                        )
+                        best = min(best, cost)
+
+                return best
             
-            if not targets:
+        #devolver extintor: andar ate onde devolver
+        
+        if isinstance(held, Extinguisher) and held is not None:
+            return min(abs(ax - tx) + abs(ay - ty) for tx, ty in extinguishers) 
+
+        #ORGANIZANDO
+        
+        #caso 1 prato sujo na mao: limpa 
+
+        if isinstance(held, Plate) and held.state == "DIRTY":
+            best = float("inf")
+
+            for (sx, sy) in sinks:
+                cost = (
+                    abs(ax - sx) + abs(ay - sy) +
+                    WASH_DURATION
+                )
+                best = min(best, cost)
+
+            return best
+        
+        
+        #caso 2 comida pronta na mao: entregar 
+        
+        if isinstance(held, Plate) and held.state == "WITH_FOOD":
+            return min(abs(ax - tx) + abs(ay - ty) for tx, ty in deliveries) 
+        
+        #caso 3 prato limpo na mao: se tiver comida pronta -> pega, se não, coloca em balcao 
+        
+        if isinstance(held, Plate) and not held.contents:
+            if chopped_food or cooked_food:
+                best = float("inf")
+                
+                for (chx, chy) in chopped_food:
+                    for (dx, dy) in deliveries:
+                        cost = (
+                        abs(ax - chx) + abs(ay - chy) +     
+                        abs(chx - dx) + abs(chy - dy)   
+                    )
+                    best = min(best, cost)
+                        
+                for (chx, chy) in cooked_food:
+                    for (dx, dy) in deliveries:
+                        cost = (
+                        abs(ax - chx) + abs(ay - chy) +     
+                        abs(chx - dx) + abs(chy - dy)   
+                    )
+                    best = min(best, cost)
+                    
+                return best
+            
+            else:
+                targets = []
                 for y, row in enumerate(state.layout):
                     for x, char in enumerate(row):
-                        if char == 'O': targets.append((x, y))
+                        if char == 'C' and state.get_object_at((x, y)) is None:
+                            targets.append((x, y))
+                
+                return min(abs(ax - tx) + abs(ay - ty) for tx, ty in targets)
+                        
+        #caso 4 segurando comida cozida 
+        if isinstance(held, Ingredient) and held.state == "COOKED":
+            best = float("inf")
+            
+            for (pcx, pcy) in plates_clean:
+                for (dx, dy) in deliveries:
+                    cost = (
+                        abs(ax - pcx) + abs(ay - pcy) +     
+                        abs(pcx - dx) + abs(pcy - dy)   
+                    )
+                    best = min(best, cost)
+            
+            return best
         
-        if not targets: return 100
+        #caso 5 segurando comida crua 
         
-        dist = min(abs(ax - tx) + abs(ay - ty) for tx, ty in targets)
-        return dist + extra_cost + (60 - progress_bonus)
+        if isinstance(held, Ingredient) and held.state == "RAW":
+            best = float("inf")
+            
+            for (csx, csy) in chop_stations:
+                for (sx, sy) in stoves:
+                    for (pcx, pcy) in plates_clean:
+                        for (dx, dy) in plates_clean:
+                            cost = (
+                                abs(ax - csx) + abs(ay - csy) +     
+                                abs(csx - sx) + abs(csy - sy) +
+                                abs(sx - pcx) + abs(sy - pcy) +     
+                                abs(pcx - dx) + abs(pcy - dy) +
+                                CHOP_DURATION +
+                                COOK_DURATION
+                            )
+                            best = min(best, cost)
+                            
+        #caso 6 segurando comida cortada
+        if isinstance(held, Ingredient) and held.state == "CHOPPED":
+            best = float("inf")
+            
+            for (sx, sy) in stoves:
+                    for (pcx, pcy) in plates_clean:
+                        for (dx, dy) in plates_clean:
+                            cost = (
+                                abs(ax - sx) + abs(ay - sy) +     
+                                abs(sx - pcx) + abs(sy - pcy) +     
+                                abs(pcx - dx) + abs(pcy - dy) +
+                                COOK_DURATION
+                            )
+                            best = min(best, cost)
+                            
+        #caso 7 comida pronta no mapa 
+        
+        if cooked_food:
+            best = float("inf")
+
+            for (cfx, cfy) in cooked_food:
+                for (pcx, pcy) in plates_clean:
+                    for (dx, dy) in deliveries:
+                        cost = (
+                            abs(ax - cfx) + abs(ay - cfy) +     
+                            abs(cfx - pcx) + abs(cfy - pcy) +   
+                            abs(pcx - dx) + abs(pcy - dy)       
+                        )
+                        best = min(best, cost)
+
+            return best
+        
+        #caso 8 comida cortada no mapa
+        
+        if chopped_food:
+            best = float("inf")
+
+            for (cfx, cfy) in chopped_food:
+                for (sx, sy) in stoves:
+                    for (pcx, pcy) in plates_clean:
+                        for (dx, dy) in deliveries:
+                            cost = (
+                                abs(ax - cfx) + abs(ay - cfy) +     
+                                abs(cfx - sx) + abs(cfy - sy) +   
+                                abs(sx - pcx) + abs(sy - pcy) +
+                                abs(pcx - dx) + abs(pcy - dy) +
+                                COOK_DURATION      
+                            )
+                            best = min(best, cost)
+
+                return best
+        
+        #caso 9 nada feito
+        best = float("inf")
+
+        for (rsx, rsy) in raw_sources:
+            for (csx, csy) in chop_stations:
+                for (sx, sy) in stoves:
+                    for (pcx, pcy) in plates_clean:
+                        for (dx, dy) in deliveries:
+                            cost = (
+                                abs(ax - rsx) + abs(ay - rsy) +     
+                                abs(rsx - csx) + abs(rsy - csy) +   
+                                abs(csx - sx) + abs(csy - sy) +
+                                abs(sx - pcx) + abs(sy - pcy) +
+                                abs(pcx - dx) + abs(pcy - dy) +  
+                                COOK_DURATION + 
+                                CHOP_DURATION     
+                            )
+                            best = min(best, cost)
+
+        return best
+        
