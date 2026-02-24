@@ -39,32 +39,28 @@ class KitchenProblem(Problem):
     def actions(self, state: KitchenState) -> List[str]:
         possible_actions = []
         x, y = state.agent_pos
-
-        # 1. Movement
+        
+        # 1. Movimentação
         for dx, dy in [(0, 1), (0, -1), (1, 0), (-1, 0)]:
             nx, ny = x + dx, y + dy
             if not state.is_impassable(nx, ny):
                 possible_actions.append(f"Move({nx}, {ny})")
-
-        # 2. Station interactions (all adjacent tiles)
+            
+        # 2. Interações com Estações Adjacentes
         for dx, dy in [(0, 1), (0, -1), (1, 0), (-1, 0)]:
             sx, sy = x + dx, y + dy
             tile = state.get_layout_at(sx, sy)
-
-            # C=Counter, S=Stove, T/B=Cutting Board, D=Delivery, W=Sink,
-            # G=Trash, E=Extinguisher holder, P=Plate counter, O=Onion source,
-            # M=Meat source, K=Pasta source, R=Return tile, N=Frying pan
-            if tile not in ('C', 'S', 'T', 'B', 'D', 'W', 'G', 'E', 'P', 'O', 'M', 'K', 'R', 'N'):
-                continue
-
-            obj_on_tile = state.get_object_at((sx, sy))
-            station_state = state.get_station_state_at((sx, sy))
-
-            # Fire suppression
-            if station_state and station_state.is_on_fire:
-                if isinstance(state.held_item, Extinguisher):
-                    possible_actions.append(f"Extinguish({sx}, {sy})")
-                continue
+            
+            # C=Counter, S=Stove, T/B=Cutting Board, D=Delivery, W=Sink, G=Trash, E=Extinguisher, P=Plate, O=Source
+            if tile in ('C', 'S', 'T', 'B', 'D', 'W', 'G', 'E', 'P', 'O'):
+                obj_on_tile = state.get_object_at((sx, sy))
+                station_state = state.get_station_state_at((sx, sy))
+                
+                # Fire suppression check
+                if station_state and station_state.is_on_fire:
+                    if isinstance(state.held_item, Extinguisher):
+                        possible_actions.append(f"Extinguish({sx}, {sy})")
+                    continue
 
             held = state.held_item
 
