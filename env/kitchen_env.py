@@ -108,8 +108,14 @@ class KitchenEnvironment(Environment):
                 name = o.recipe.name if o.recipe else o.ingredients[0] + "..."
                 ing_counts = Counter(pot_required_ingredients(o))
                 ing_str = ", ".join(f"{v}x {k}" for k, v in ing_counts.items())
-                order_strs.append(f"{name} ({ing_str})")
-            lines.append("Pedidos ativos:\n  - " + "\n  - ".join(order_strs))
+                
+                # Cálculo do tempo restante
+                deadline = o.instant + o.duration
+                remaining = max(0, deadline - self.state.time)
+                time_str = f"Tempo: {remaining}s restantes"
+                
+                order_strs.append(f"{name} ({ing_str}) | {time_str}")
+            lines.append("Pedidos ativos (Fila de Prioridade):\n  - " + "\n  - ".join(order_strs))
 
         # Detalhes das estações
         for pos, s_state in self.state.stations_state:

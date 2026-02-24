@@ -1,0 +1,23 @@
+--- Step 167 ---
+
+Tempo: 167 | Segurando: Nada
+Pontos: 20 / 65 | Estrelas: ☆☆☆
++---------------------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  .  P  C  k  C  k  C  .  .  .  C  C  C  E  G  .  C  # |
+| #  .  .  .  .  .  .  C  .  .  .  .  .  .  .  .  .  D  # |
+| #  W  .  .  .  .  .  C  .  .  .  P  .  .  .  .  .  D  # |
+| #  W  .  .  .  .  .  .  .  .  .  C  .  .  .  .  .  .  # |
+| #  .  .  .  .  .  A  .  .  .  .  C  .  .  .  .  .  .  # |
+| #  .  C  C  T  C  t  C  .  .  .  C  O  C  V  C  C  .  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------------------+
+Pedidos ativos:
+  - Tomato Soup (3x Tomato)
+  - Mixed Soup (2x Onion, 1x Tomato)
+  Estação em (4, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
+  Estação em (6, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
+  Estação em (6, 6): Tomato(RAW) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo

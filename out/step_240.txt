@@ -1,0 +1,22 @@
+--- Step 240 ---
+
+Tempo: 240 | Segurando: Tomato(RAW)
+Pontos: 20 / 65 | Estrelas: ☆☆☆
++---------------------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  .  P  C  f  C  k  C  .  .  .  C  C  C  E  G  .  C  # |
+| #  .  .  .  .  .  .  C  .  .  .  .  .  .  .  .  .  D  # |
+| #  W  .  .  .  .  .  C  .  .  .  P  .  .  A  .  .  D  # |
+| #  W  .  .  .  .  .  .  .  .  .  C  .  .  .  .  .  .  # |
+| #  .  .  .  .  .  .  .  .  .  .  C  .  .  .  .  .  .  # |
+| #  .  C  C  T  C  T  C  .  .  .  C  O  C  V  C  C  .  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------------------+
+Pedidos ativos:
+  - Tomato Soup (3x Tomato)
+  - Mixed Soup (2x Onion, 1x Tomato)
+  Estação em (4, 1): Panela(FILLING, [Tomato, Tomato], prog=0) | Progresso: 0
+  Estação em (6, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo

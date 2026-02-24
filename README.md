@@ -1,10 +1,37 @@
 # Mini-Overcooked-AI
 
-Simulação do jogo Overcooked usando um agente de busca heurística (A*). O agente planeja e executa ações em uma cozinha 2D para completar pedidos de pratos — incluindo **sopas com múltiplos ingredientes** cozidos em panela.
+<p align="center">
+  <img src="docs/Logo.png" width="400">
+</p>
+
+Simulação do jogo Overcooked usando um agente de busca heurística (A*). O agente planeja e executa ações em uma cozinha 2D para completar pedidos de pratos.
+
+Projeto feito durante a disciplina de **Inteligência Artificial** ofertada pelo
+Professor Dr. [Carlos Estombelo](https://buscatextual.cnpq.br/buscatextual/visualizacv.do;jsessionid=DE61ED8E3C1EC01F314A6D5A60311891.buscatextual_0) na Universidade Federal de Sergipe.
 
 ## Membros da Equipe
 
+- [Alícia Vitória Sousa Santos](https://github.com/aliciasnts)
+- [Gustavo Assunção do Amaral](https://github.com/redbdb)
+- [Gustavo Henrique Aragão Silva](https://github.com/gustaaragao)
+- [João Vitor Viana Felix](https://github.com/Jvvflx)
+- [Jorge Henrique Marques Gomes](https://github.com/jorge2812)
 
+## Mapa Inicial e Simulação (Terminal)
+
+<p align="center">
+  <img src="docs/maps/Overcooked1.webp" width="400">
+  <img src="docs/ASCII.png" width="400">
+</p>
+
+## Simplificações do Projeto
+
+Para viabilizar a modelagem em algoritmos de busca clássicos, o ambiente passou por algumas simplificações em relação ao *Overcooked* original (detalhado em [`docs/ESPECIFICAÇÃO.md`](docs/ESPECIFICAÇÃO.md)):
+
+- **Apenas um cozinheiro**: a cozinha é operada por um único agente.
+- **Ambiente Estático**: Os mapas não possuem obstáculos dinâmicos (como plataformas móveis ou pedestres).
+- **Sem fila contínua de pedidos**: A fila de pedidos é carregada de forma inteira no início da fase e não chegam novos ao longo do tempo.
+- **Panela fixa**: A panela (`K`) comporta múltiplos ingredientes para fazer sopas, mas não pode ser removida fisicamente do fogão.
 
 ## Estrutura
 

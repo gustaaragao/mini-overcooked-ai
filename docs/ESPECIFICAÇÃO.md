@@ -20,7 +20,7 @@ O ambiente é uma grade 2D representando uma cozinha. Cada célula pode conter (
 | `T` / `B` | Tábua de Corte (preparação/corte) |
 | `K`  | **Panela** no fogão (cozimento multi-ingrediente — sopas) |
 | `D`  | Entrega |
-| `G`  | Lixeira |
+| `G`  | Lixeira (Usada para descartar ingredientes em estado `BURNT`) |
 | `E`  | Balcão com Extintor |
 | `P`  | Balcão com Prato (sujo ou limpo) |
 | `O`  | Fonte Infinita de Cebola |
@@ -41,6 +41,10 @@ KitchenState(
     time            : int
 )
 ```
+
+**Fila de Prioridade em `active_orders`:**
+- A tupla `active_orders` funciona como uma **Priority Queue** (Fila de Prioridade) estática.
+- Em sua inicialização, os pedidos base são sorteados pelo menor tempo de limite (deadline), calculado por `(instant + duration)`. Dessa forma, o agente sempre focará em processar o pedido que está mais perto de expirar, visando maximizar a pontuação.
 
 ### Receitas (`Recipe`)
 

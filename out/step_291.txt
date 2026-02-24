@@ -1,0 +1,22 @@
+--- Step 291 ---
+
+Tempo: 291 | Segurando: Prato(WITH_FOOD, [Tomato, Tomato, Tomato])
+Pontos: 20 / 65 | Estrelas: ☆☆☆
++---------------------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  .  P  C  k  C  k  C  .  .  .  C  C  C  E  G  .  C  # |
+| #  .  .  .  .  .  .  C  .  .  .  .  .  .  .  .  .  D  # |
+| #  W  .  .  .  .  .  C  .  .  .  C  .  .  .  .  .  D  # |
+| #  W  .  .  .  .  A  .  .  .  .  C  .  .  .  .  .  .  # |
+| #  .  .  .  .  .  .  .  .  .  .  C  .  .  .  .  .  .  # |
+| #  .  C  C  T  C  T  C  .  .  .  C  O  C  V  C  C  .  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------------------+
+Pedidos ativos:
+  - Tomato Soup (3x Tomato)
+  - Mixed Soup (2x Onion, 1x Tomato)
+  Estação em (4, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
+  Estação em (6, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo

@@ -30,12 +30,15 @@ def create_initial_state(layout: List[str], orders: List[Order]) -> KitchenState
                 row_list[x] = "C"  # Extinguishers start on a counter
         clean_layout.append("".join(row_list))
 
+    # Simula Fila de Prioridade (Priority Queue) baseada no deadline (instant + duration)
+    sorted_orders = sorted(orders, key=lambda o: o.instant + o.duration)
+
     return KitchenState(
         agent_pos=agent_pos,
         held_item=None,
         layout=tuple(clean_layout),
         grid_objects=tuple(grid_objects_list),
-        active_orders=tuple(orders),
+        active_orders=tuple(sorted_orders),
         delivered_orders=(),
         stations_state=tuple(stations_state_list),
         time=0,

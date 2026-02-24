@@ -1,0 +1,19 @@
+--- Step 453 ---
+
+Tempo: 453 | Segurando: Nada
+Pontos: 65 / 65 | Estrelas: ⭐⭐⭐
++---------------------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  .  P  P  k  C  k  C  .  .  .  C  C  C  E  G  .  C  # |
+| #  .  .  .  .  .  .  C  .  .  .  .  .  .  .  .  A  D  # |
+| #  W  .  .  .  .  .  C  .  .  .  C  .  .  .  .  .  D  # |
+| #  W  .  .  .  .  .  .  .  .  .  C  .  .  .  .  .  .  # |
+| #  .  .  .  .  .  .  .  .  .  .  C  .  .  .  .  .  .  # |
+| #  .  C  C  T  C  T  C  .  .  .  C  O  C  V  C  C  .  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------------------+
+  Estação em (4, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
+  Estação em (6, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo

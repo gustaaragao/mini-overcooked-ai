@@ -14,7 +14,7 @@ def load_kitchen_data(file_path: str) -> Tuple[List[str], List[Order], int]:
 
     orders: List[Order] = []
     for o in orders_data:
-        # Build recipe if defined in JSON
+        # Constrói a receita se estiver definida no JSON
         recipe = None
         if "recipe" in o:
             steps = tuple(

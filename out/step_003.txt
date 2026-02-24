@@ -12,10 +12,10 @@ Pontos: 0 / 65 | Estrelas: ☆☆☆
 | #  .  C  C  T  C  T  C  .  .  .  C  O  C  V  C  C  .  # |
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
 +---------------------------------------------------------+
-Pedidos ativos:
-  - Onion Soup (3x Onion)
-  - Tomato Soup (3x Tomato)
-  - Mixed Soup (2x Onion, 1x Tomato)
+Pedidos ativos (Fila de Prioridade):
+  - Onion Soup (3x Onion) | ⏰ 197s restantes
+  - Tomato Soup (3x Tomato) | ⏰ 227s restantes
+  - Mixed Soup (2x Onion, 1x Tomato) | ⏰ 257s restantes
   Estação em (4, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
   Estação em (6, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
 

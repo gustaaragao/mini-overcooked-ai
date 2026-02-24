@@ -3,9 +3,9 @@ import time
 from aima3.search import Node
 
 def astar_search_with_limit(problem, h, max_expansions=50000, max_time_s=5.0):
-    """A* search with expansion and time limits.
+    """A* search com limites de expansão e tempo.
     
-    Prevents the agent from hanging indefinitely on unsolvable/complex subgoals.
+    Previne que o agente fique preso indefinidamente em sub-objetivos complexos/sem solução.
     """
     start_t = time.monotonic()
     node = Node(problem.initial)
@@ -44,7 +44,7 @@ def astar_search_with_limit(problem, h, max_expansions=50000, max_time_s=5.0):
     return None
 
 def weighted_astar_search(problem, h, weight=1.5):
-    """Weighted A* Search"""
+    """Busca A* Ponderada (Weighted A*)"""
 
     node = Node(problem.initial)
 

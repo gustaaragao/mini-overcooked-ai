@@ -29,6 +29,15 @@ class KitchenAgent(Agent):
             else:
                 return lambda s: isinstance(s.held_item, Extinguisher)
 
+        # 1.5. Lixeira: Descartar itens queimados (BURNT)
+        if isinstance(state.held_item, Ingredient) and state.held_item.state == 'BURNT':
+            return lambda s: s.held_item is None
+
+        for pos, s_state in state.stations_state:
+            if isinstance(s_state.content, Ingredient) and s_state.content.state == 'BURNT':
+                if state.held_item is None:
+                    return lambda s: isinstance(s.held_item, Ingredient) and s.held_item.state == 'BURNT'
+
         # 2. Estações com progresso (Chop, Cook, Wash)
         for pos, s_state in state.stations_state:
             if s_state.content:
