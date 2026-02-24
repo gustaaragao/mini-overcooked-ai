@@ -1,6 +1,3 @@
-import heapq
-import time
-
 from aima3.agents import Agent
 from aima3.search import Node
 
@@ -188,11 +185,11 @@ class KitchenAgent(Agent):
             subgoal_fn = self.get_subgoal_test(state)
 
             if subgoal_fn:
-                print(f"[Agent] Searching for sub-goal plan (step={state.time})...")
+                print(f"[Agente] Buscando plano para sub-objetivo (passo={state.time})...")
                 problem = KitchenProblem(state, goal_test_fn=subgoal_fn)
                 solution_node = astar_search_with_limit(problem, lambda n: 0, max_expansions=100000)
             else:
-                print(f"[Agent] Searching for full goal plan (step={state.time})...")
+                print(f"[Agente] Buscando plano para objetivo completo (passo={state.time})...")
                 problem = KitchenProblem(state)
                 solution_node = astar_search_with_limit(problem, self.heuristic, max_expansions=200000)
 
@@ -200,10 +197,10 @@ class KitchenAgent(Agent):
                 self.plan = solution_node.solution()
                 self.debug_info["plan_found"] = True
                 self.debug_info["plan_length"] = len(self.plan)
-                print(f"[Agent] Plan found with {len(self.plan)} actions.")
+                print(f"[Agente] Plano encontrado com {len(self.plan)} ações.")
             else:
                 self.debug_info["plan_found"] = False
-                print(f"[Agent] No plan found.")
+                print(f"[Agente] Nenhum plano encontrado.")
                 return None
 
         if self.plan:

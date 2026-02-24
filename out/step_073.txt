@@ -1,23 +1,22 @@
---- Step 73 ---
+--- Passo 73 ---
 
-Tempo: 73 | Segurando: Onion(CHOPPED)
-Pontos: 0 / 65 | Estrelas: ☆☆☆
-+---------------------------------------------------------+
-| #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
-| #  .  C  C  f  C  k  C  .  .  .  C  C  C  E  G  .  C  # |
-| #  .  .  .  .  .  A  C  .  .  .  .  .  .  .  .  .  D  # |
-| #  W  .  .  .  .  .  P  .  .  .  P  .  .  .  .  .  D  # |
-| #  W  .  .  .  .  .  .  .  .  .  C  .  .  .  .  .  .  # |
-| #  .  .  .  .  .  .  .  .  .  .  C  .  .  .  .  .  .  # |
-| #  .  C  C  T  C  T  C  .  .  .  C  O  C  V  C  C  .  # |
-| #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
-+---------------------------------------------------------+
-Pedidos ativos:
-  - Onion Soup (3x Onion)
-  - Tomato Soup (3x Tomato)
-  - Mixed Soup (2x Onion, 1x Tomato)
-  Estação em (4, 1): Panela(FILLING, [Onion], prog=0) | Progresso: 0
-  Estação em (6, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
+Tempo: 73 | Segurando: Prato(CLEAN)
+Pontos: 0 / 20 | Estrelas: ☆☆☆
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  O  C  C  C  R  C  C  C  P  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  A  .  .  W  # |
+| #  C  C  C  C  C  C  .  .  .  .  .  .  W  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  C  C  T  C  T  C  C  C  C  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos (Fila de Prioridade):
+  - Onion Soup (3x Onion) | Tempo: 127s restantes
+  Estação em (7, 1): Panela(READY, [Onion, Onion, Onion], prog=7) | Progresso: 7
 
 Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
          O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo

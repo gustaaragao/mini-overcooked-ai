@@ -34,13 +34,15 @@ class KitchenProblem(Problem):
         x, y = state.agent_pos
 
         # 1. Movimentação
-        for dx, dy in [(0, 1), (0, -1), (1, 0), (-1, 0)]:
+        # for dx, dy in [(0, 1), (0, -1), (1, 0), (-1, 0)]: # vizinhança-4
+        for dx, dy in [(0, 1), (0, -1), (1, 0), (-1, 0), (1, 1), (-1, 1), (1, -1), (-1, -1)]: # vizinhança-8
             nx, ny = x + dx, y + dy
             if not state.is_impassable(nx, ny):
                 possible_actions.append(f"Move({nx}, {ny})")
 
         # 2. Interações com Estações Adjacentes
-        for dx, dy in [(0, 1), (0, -1), (1, 0), (-1, 0)]:
+        # for dx, dy in [(0, 1), (0, -1), (1, 0), (-1, 0), (1, 1), (-1, 1), (1, -1), (-1, -1)]: # vizinhança-8
+        for dx, dy in [(0, 1), (0, -1), (1, 0), (-1, 0)]: # vizinhança-4
             sx, sy = x + dx, y + dy
             tile = state.get_layout_at(sx, sy)
 

@@ -1,14 +1,3 @@
-"""Ponto de entrada do Mini-Overcooked.
-
-Modos de execução
------------------
-  python main.py [layout]           -- Modo interativo: limpa a tela e aguarda
-                                       tecla a cada passo; salva out/step_NNN.txt
-                                       para cada estado + out/render.txt completo.
-  python main.py [layout] --auto    -- Modo automático: roda sem interação e
-                                       gera apenas out/render.txt.
-"""
-
 import os
 import sys
 import argparse
@@ -17,11 +6,6 @@ from utils import load_kitchen_data, create_initial_state
 from env.kitchen_env import KitchenEnvironment
 from agents.kitchen_agent import KitchenAgent
 from problems.kitchen_problem import KitchenProblem
-
-
-# ---------------------------------------------------------------------------
-# Cross-platform: aguarda uma tecla sem precisar apertar Enter
-# ---------------------------------------------------------------------------
 
 def _wait_for_key(prompt: str = "\n[Pressione qualquer tecla para avançar...]") -> None:  # aguarda tecla sem Enter
     print(prompt, end="", flush=True)
@@ -43,11 +27,7 @@ def _wait_for_key(prompt: str = "\n[Pressione qualquer tecla para avançar...]")
 def _clear_screen() -> None:
     os.system("cls" if sys.platform == "win32" else "clear")
 
-
-# ---------------------------------------------------------------------------
 # Simulação principal
-# ---------------------------------------------------------------------------
-
 def run():
     parser = argparse.ArgumentParser(description="Simulação Mini-Overcooked")
     parser.add_argument(
@@ -88,7 +68,7 @@ def run():
 
     if interactive:
         _clear_screen()  # limpa o terminal antes de exibir
-        print(f"=== Mini-Overcooked | Level: {layout_path} ===")
+        print(f"=== Mini-Overcooked | Nível: {layout_path} ===")
         print("\n--- Estado Inicial ---")
         print(initial_render)
         # Salva o estado inicial como step 000
@@ -103,19 +83,19 @@ def run():
         env.step()
 
         step_render = env.render(quiet=True)
-        step_header = f"\n--- Step {step} / {max_steps} ---\n"
+        step_header = f"\n--- Passo {step} / {max_steps} ---\n"
         render_lines.append(step_header)
         render_lines.append(step_render)
 
         if interactive:
             _clear_screen()
-            print(f"=== Mini-Overcooked | Level: {layout_path} ===")
-            print(f"--- Step {step} / {max_steps} ---")
+            print(f"=== Mini-Overcooked | Nível: {layout_path} ===")
+            print(f"--- Passo {step} / {max_steps} ---")
             print(step_render)
             # Salva o estado atual em arquivo individual
             step_path = os.path.join(out_dir, f"step_{step:03d}.txt")
             with open(step_path, "w", encoding="utf-8") as sf:
-                sf.write(f"--- Step {step} ---\n")
+                sf.write(f"--- Passo {step} ---\n")
                 sf.write(step_render)
 
         # Verifica se o objetivo foi alcançado
@@ -128,7 +108,7 @@ def run():
         if interactive:
             _wait_for_key()
     else:
-        msg = "\n[Simulação] Limite de steps atingido."
+        msg = "\n[Simulação] Limite de passos atingido."
         print(msg)
         render_lines.append(msg + "\n")
 

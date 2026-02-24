@@ -4,7 +4,7 @@
   <img src="docs/Logo.png" width="400">
 </p>
 
-Simulação do jogo Overcooked usando um agente de busca heurística (A*). O agente planeja e executa ações em uma cozinha 2D para completar pedidos de pratos.
+Simulação do jogo Overcooked usando um **agente de busca heurística (A*)**. O agente planeja e executa ações em uma cozinha 2D para completar pedidos de pratos.
 
 Projeto feito durante a disciplina de **Inteligência Artificial** ofertada pelo
 Professor Dr. [Carlos Estombelo](https://buscatextual.cnpq.br/buscatextual/visualizacv.do;jsessionid=DE61ED8E3C1EC01F314A6D5A60311891.buscatextual_0) na Universidade Federal de Sergipe.

@@ -1,23 +1,22 @@
---- Step 14 ---
+--- Passo 14 ---
 
-Tempo: 14 | Segurando: Onion(RAW)
-Pontos: 0 / 65 | Estrelas: ☆☆☆
-+---------------------------------------------------------+
-| #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
-| #  .  C  C  k  C  k  C  .  .  .  C  C  C  E  G  .  C  # |
-| #  .  .  .  .  .  .  C  .  .  .  .  .  .  .  .  .  D  # |
-| #  W  .  .  .  .  .  P  .  .  .  P  .  .  .  .  .  D  # |
-| #  W  .  .  .  .  .  .  .  .  .  C  .  .  .  .  .  .  # |
-| #  .  .  .  .  .  .  .  .  .  .  C  A  .  .  .  .  .  # |
-| #  .  C  C  T  C  T  C  .  .  .  C  O  C  V  C  C  .  # |
-| #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
-+---------------------------------------------------------+
+Tempo: 14 | Segurando: Onion(CHOPPED)
+Pontos: 0 / 20 | Estrelas: ☆☆☆
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  O  C  C  C  k  C  C  C  P  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  A  .  .  .  .  .  W  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
 Pedidos ativos (Fila de Prioridade):
-  - Onion Soup (3x Onion) | ⏰ 186s restantes
-  - Tomato Soup (3x Tomato) | ⏰ 216s restantes
-  - Mixed Soup (2x Onion, 1x Tomato) | ⏰ 246s restantes
-  Estação em (4, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
-  Estação em (6, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
+  - Onion Soup (3x Onion) | Tempo: 186s restantes
+  Estação em (7, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
 
 Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
          O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo

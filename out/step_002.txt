@@ -1,23 +1,22 @@
---- Step 2 ---
+--- Passo 2 ---
 
 Tempo: 2 | Segurando: Nada
-Pontos: 0 / 65 | Estrelas: ☆☆☆
-+---------------------------------------------------------+
-| #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
-| #  .  C  C  k  C  k  C  .  .  .  C  C  C  E  G  .  C  # |
-| #  .  .  .  .  .  .  C  .  .  .  .  .  .  .  .  .  D  # |
-| #  W  .  .  .  .  .  P  .  .  .  P  .  .  .  .  .  D  # |
-| #  W  .  .  .  .  A  .  .  .  .  C  .  .  .  .  .  .  # |
-| #  .  .  .  .  .  .  .  .  .  .  C  .  .  .  .  .  .  # |
-| #  .  C  C  T  C  T  C  .  .  .  C  O  C  V  C  C  .  # |
-| #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
-+---------------------------------------------------------+
+Pontos: 0 / 20 | Estrelas: ☆☆☆
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  O  C  C  C  k  C  C  C  P  C  C  # |
+| #  C  .  A  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  .  .  .  .  .  .  W  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
 Pedidos ativos (Fila de Prioridade):
-  - Onion Soup (3x Onion) | ⏰ 198s restantes
-  - Tomato Soup (3x Tomato) | ⏰ 228s restantes
-  - Mixed Soup (2x Onion, 1x Tomato) | ⏰ 258s restantes
-  Estação em (4, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
-  Estação em (6, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
+  - Onion Soup (3x Onion) | Tempo: 198s restantes
+  Estação em (7, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
 
 Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
          O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
