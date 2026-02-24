@@ -15,12 +15,16 @@ O ambiente é uma grade 2D representando uma cozinha. Cada célula pode conter (
 - `#` : Parede (impasável)
 - `C` : Balcão (armazenamento)
 - `S` : Fogão (cozimento)
+- `N` : Panela (fritar)
 - `T` ou `B` : Tábua de Corte (preparação/corte)
 - `D` : Entrega
+- `R` : Entrega de Pratos (Sujo)
 - `G` : Lixeira
 - `E` : Balcão com Extintor
 - `P` : Balcão com Prato (Sujo ou Limpo)
 - `O` : Fonte Infinita de Cebola (Onion Source)
+- `M` : Fonte Infinita de Carne (Meat Source)
+- `K` : Fonte Infinita de Massa (Pasta Source)
 - `W` : Pia (Sink) para lavar pratos sujos
 
 ## 2. Estado Inicial

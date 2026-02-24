@@ -1,8 +1,7 @@
 {
-  
   "layout": [
     "################",
-    "######C.DDEC####",
+    "######CRDDEC####",
     "#COOOCA...CWWCC#",
     "#C............G#",
     "#C.CCCCCCCCCC.C#",
@@ -15,7 +14,9 @@
   ],
   "orders": [
     {
-      "ingredients": ["Onion"],
+      "ingredients": [
+        "Onion"
+      ],
       "instant": 0,
       "duration": 50,
       "score": 10

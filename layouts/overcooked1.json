@@ -1,13 +1,12 @@
 {
-  
   "layout": [
     "###############",
-    "#CCCOCCCCSCCCC#",
+    "#CCCOCCNCSCCCC#",
     "#C...........E#",
     "#C...A.......C#",
     "#C...........W#",
     "#CCCCCCCCCC..W#",
-    "#............C#",
+    "#R...........C#",
     "#D...........C#",
     "#D...........G#",
     "#CCCTCTCCCPPCC#",
@@ -15,11 +14,29 @@
   ],
   "orders": [
     {
-      "ingredients": ["Onion"],
+      "ingredients": [
+        "Onion"
+      ],
       "instant": 0,
-      "duration": 50,
+      "duration": 100,
+      "score": 10
+    },
+    {
+      "ingredients": [
+        "Onion"
+      ],
+      "instant": 0,
+      "duration": 100,
+      "score": 10
+    },
+    {
+      "ingredients": [
+        "Onion"
+      ],
+      "instant": 0,
+      "duration": 100,
       "score": 10
     }
   ],
-  "max_steps": 100
+  "max_steps": 3000
 }

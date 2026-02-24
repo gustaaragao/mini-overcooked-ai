@@ -16,7 +16,7 @@ def create_initial_state(layout: List[str], orders: List[Order]) -> KitchenState
             if char == "A":
                 agent_pos = (x, y)
                 row_list[x] = "."  # Agent starts on floor
-            elif char in ("S", "T", "B", "W"):  # Stove, Cutting Board (T/B), Sink (W)
+            elif char in ("S", "T", "B", "W", "R", "N"):  # Stove, Cutting Board (T/B), Sink (W), Counter (R)
                 stations_state_list.append(((x, y), StationState()))
             elif char == "P":  # Initial Clean Plate on Counter
                 grid_objects_list.append(
@@ -32,9 +32,9 @@ def create_initial_state(layout: List[str], orders: List[Order]) -> KitchenState
         agent_pos=agent_pos,
         held_item=None,
         layout=tuple(clean_layout),
-        grid_objects=tuple(grid_objects_list),
+        grid_objects=tuple(sorted(grid_objects_list, key=lambda x: x[0])),
         active_orders=tuple(orders),
         delivered_orders=(),
-        stations_state=tuple(stations_state_list),
+        stations_state=tuple(sorted(stations_state_list, key=lambda x: x[0])),
         time=0,
     )

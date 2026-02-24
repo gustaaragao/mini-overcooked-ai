@@ -1,0 +1,36 @@
+{
+    "layout": [
+        "###############",
+        "#CCCOCCNCSCCCC#",
+        "#M...........E#",
+        "#C...A.......C#",
+        "#K...........W#",
+        "#CCCCCCCCCC..W#",
+        "#R...........C#",
+        "#D...........C#",
+        "#D...........G#",
+        "#CCCTCTCCCPPCC#",
+        "###############"
+    ],
+    "orders": [
+        {
+            "ingredients": [
+                "Meat",
+                "Pasta"
+            ],
+            "instant": 0,
+            "duration": 100,
+            "score": 10
+        },
+        {
+            "ingredients": [
+                "Meat",
+                "Pasta"
+            ],
+            "instant": 0,
+            "duration": 100,
+            "score": 10
+        }
+    ],
+    "max_steps": 3000
+}

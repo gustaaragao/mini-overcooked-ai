@@ -35,15 +35,27 @@ class KitchenEnvironment(Environment):
         
         # Estações e seus estados
         for (x, y), s_state in self.state.stations_state:
+            tile = self.state.get_layout_at(x, y)
             if s_state.is_on_fire:
                 render_grid[y][x] = 'F' # Fire
             elif s_state.content:
                 if isinstance(s_state.content, Plate):
-                    render_grid[y][x] = 'p'
+                    # Só mostra 'p' se o prato estiver em counter (C) ou pia (W)
+                    if tile in ('C', 'W'):
+                        render_grid[y][x] = 'p'
                 elif isinstance(s_state.content, Extinguisher):
                     render_grid[y][x] = 'e'
                 else:
-                    render_grid[y][x] = s_state.content.name[0].lower()
+                    # Ingredient — show initial of state for N tile (frying pan)
+                    ing = s_state.content
+                    if tile == 'N':
+                        # Show '~' while frying, '*' when fried
+                        if ing.state == 'FRIED':
+                            render_grid[y][x] = '*'
+                        else:
+                            render_grid[y][x] = '~'
+                    else:
+                        render_grid[y][x] = ing.name[0].lower()
 
         # Insere objetos dinâmicos
         for (x, y), obj in self.state.grid_objects:
@@ -61,7 +73,7 @@ class KitchenEnvironment(Environment):
         held = self.state.held_item
         if held:
             if isinstance(held, Plate):
-                holding_str = f"Plate({held.state})"
+                holding_str = f"Plate({held.state}, contents={held.contents})"
             elif isinstance(held, Extinguisher):
                 holding_str = "Extinguisher"
             else:
@@ -79,9 +91,22 @@ class KitchenEnvironment(Environment):
         if self.state.active_orders:
             lines.append("Active Orders: " + str([", ".join(o.ingredients) for o in self.state.active_orders]))
 
+        # Mostra pratos sujos acumulados no tile R
+        for y_idx, row in enumerate(self.state.layout):
+            for x_idx, char in enumerate(row):
+                if char == 'R':
+                    count = sum(
+                        1 for pos, obj in self.state.grid_objects
+                        if pos == (x_idx, y_idx) and isinstance(obj, Plate) and obj.state == 'DIRTY'
+                    )
+                    if count > 0:
+                        lines.append(f"  Return tile ({x_idx},{y_idx}): {count} dirty plate(s) stacked")
+
+
         # Mostra detalhes das estações
         for pos, s_state in self.state.stations_state:
             if s_state.content or s_state.is_on_fire:
+                tile = self.state.get_layout_at(pos[0], pos[1])
                 content = s_state.content
                 if isinstance(content, Plate):
                     content_str = f"Plate({content.state})"
@@ -91,8 +116,12 @@ class KitchenEnvironment(Environment):
                     content_str = f"{content.name}({content.state})"
                 else:
                     content_str = "EMPTY"
+                tile_label = {
+                    'S': 'Stove', 'N': 'Pan', 'T': 'Board', 'B': 'Board',
+                    'W': 'Sink', 'C': 'Counter'
+                }.get(tile, tile)
                 fire_str = "!!! ON FIRE !!!" if s_state.is_on_fire else ""
-                lines.append(f"  Station at {pos}: {content_str} | Progress: {s_state.progress} {fire_str}")
+                lines.append(f"  {tile_label} at {pos}: {content_str} | Progress: {s_state.progress} {fire_str}")
 
         rendered = "\n".join(lines) + "\n"
         if out is not None:

@@ -1,4 +1,4 @@
-from typing import NamedTuple, Optional, Tuple, Union
+from typing import NamedTuple, Optional, Tuple, Union, Any
 
 from models.entities import Order, Ingredient, Plate, Extinguisher
 from models.states.station_state import StationState
@@ -19,28 +19,17 @@ class KitchenState(NamedTuple):
     time: int = 0
 
     def _search_key(self):
-        """Key used for hashing/equality in search.
-
-        The simulator uses `time` for rendering and logs, but including it in
-        the state identity makes every step unique and prevents cycle
-        detection in graph search (A*, UCS, etc.). For planning we want the
-        state identity to depend on the physical configuration, not the tick
-        counter.
+        """Key used for hashing/equality. 
+        Note: grid_objects and stations_state SHOULD be pre-sorted for performance.
         """
-        # Sort objects by position to ensure canonical representation
-        # grid_objects is ((pos, item), ...)
-        sorted_objects = tuple(sorted(self.grid_objects, key=lambda x: x[0]))
-        # stations_state is ((pos, s_state), ...)
-        sorted_stations = tuple(sorted(self.stations_state, key=lambda x: x[0]))
-
         return (
             self.agent_pos,
             self.held_item,
             self.layout,
-            sorted_objects,
+            self.grid_objects,
             self.active_orders,
             self.delivered_orders,
-            sorted_stations,
+            self.stations_state,
         )
 
     def __hash__(self):
