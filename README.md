@@ -17,6 +17,13 @@ Professor Dr. [Carlos Estombelo](https://buscatextual.cnpq.br/buscatextual/visua
 - [João Vitor Viana Felix](https://github.com/Jvvflx)
 - [Jorge Henrique Marques Gomes](https://github.com/jorge2812)
 
+## Documentação
+
+- [`docs/ESPECIFICAÇÃO.md`](docs/ESPECIFICAÇÃO.md) — especificação formal do problema (AIMA)
+- Contem informações sobre como foi implementado além de especificações sobre o ambiente(Determinístico, Totalmente observável, Estático, Discreto e Agente único).
+
+# Mini-Overcooked-AI
+
 ## Mapa Inicial e Simulação (Terminal)
 
 <p align="center">
@@ -151,7 +158,3 @@ task test
 | `D` | Entrega |
 | `P` | Prato inicial |
 | `G` | Lixeira |
-
-## Documentação
-
-- [`docs/ESPECIFICAÇÃO.md`](docs/ESPECIFICAÇÃO.md) — especificação formal do problema (AIMA)
