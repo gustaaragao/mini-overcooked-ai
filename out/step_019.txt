@@ -1,0 +1,21 @@
+--- Step 19 ---
+
+Tempo: 19 | Segurando: Nada
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  O  C  C  C  k  C  C  C  P  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  .  .  .  .  .  .  W  # |
+| #  D  .  .  .  .  A  .  .  .  .  .  .  C  # |
+| #  C  C  C  T  C  o  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Onion Soup
+  Estação em (7, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
+  Estação em (6, 8): Onion(CHOPPED) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo

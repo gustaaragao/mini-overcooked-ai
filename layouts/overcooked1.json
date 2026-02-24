@@ -1,25 +1,37 @@
 {
-  
   "layout": [
     "###############",
-    "#CCCOCCCCSCCCC#",
-    "#C...........E#",
+    "#CCOCCCKCCCPCC#",
+    "#C...........C#",
+    "#C...........C#",
     "#C...A.......C#",
     "#C...........W#",
-    "#CCCCCCCCCC..W#",
-    "#............C#",
+    "#CCCCCC......W#",
     "#D...........C#",
-    "#D...........G#",
     "#CCCTCTCCCPPCC#",
     "###############"
   ],
   "orders": [
     {
-      "ingredients": ["Onion"],
+      "ingredients": [
+        "Onion",
+        "Onion",
+        "Onion"
+      ],
       "instant": 0,
-      "duration": 50,
-      "score": 10
+      "duration": 200,
+      "score": 20,
+      "recipe": {
+        "name": "Onion Soup",
+        "steps": [
+          {
+            "ingredient": "Onion",
+            "required_state": "CHOPPED",
+            "quantity": 3
+          }
+        ]
+      }
     }
   ],
-  "max_steps": 100
+  "max_steps": 300
 }

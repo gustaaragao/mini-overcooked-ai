@@ -1,4 +1,4 @@
-from typing import NamedTuple, Tuple
+from typing import NamedTuple, Optional, Tuple
 
 
 class Order(NamedTuple):
@@ -6,3 +6,4 @@ class Order(NamedTuple):
     instant: int
     duration: int
     score: int
+    recipe: Optional["Recipe"] = None

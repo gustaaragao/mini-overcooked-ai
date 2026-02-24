@@ -1,77 +1,143 @@
+"""Ponto de entrada do Mini-Overcooked.
+
+Modos de execução
+-----------------
+  python main.py [layout]           -- Modo interativo: limpa a tela e aguarda
+                                       tecla a cada passo; salva out/step_NNN.txt
+                                       para cada estado + out/render.txt completo.
+  python main.py [layout] --auto    -- Modo automático: roda sem interação e
+                                       gera apenas out/render.txt.
+"""
+
+import os
 import sys
 import argparse
-import os
+
 from utils import load_kitchen_data, create_initial_state
 from env.kitchen_env import KitchenEnvironment
 from agents.kitchen_agent import KitchenAgent
 from problems.kitchen_problem import KitchenProblem
 
+
+# ---------------------------------------------------------------------------
+# Cross-platform: aguarda uma tecla sem precisar apertar Enter
+# ---------------------------------------------------------------------------
+
+def _wait_for_key(prompt: str = "\n[Pressione qualquer tecla para avançar...]") -> None:  # aguarda tecla sem Enter
+    print(prompt, end="", flush=True)
+    if sys.platform == "win32":
+        import msvcrt
+        msvcrt.getch()
+    else:
+        import tty, termios
+        fd = sys.stdin.fileno()
+        old = termios.tcgetattr(fd)
+        try:
+            tty.setraw(fd)
+            sys.stdin.read(1)
+        finally:
+            termios.tcsetattr(fd, termios.TCSADRAIN, old)
+    print()  # nova linha após a tecla
+
+
+def _clear_screen() -> None:
+    os.system("cls" if sys.platform == "win32" else "clear")
+
+
+# ---------------------------------------------------------------------------
+# Simulação principal
+# ---------------------------------------------------------------------------
+
 def run():
-    parser = argparse.ArgumentParser(description="Mini-Overcooked Simulation")
-    parser.add_argument("layout", nargs="?", default="layouts/overcooked1.json", help="Path to layout file")
-    parser.add_argument("--debug", action="store_true", help="Interactive step-by-step mode")
-    parser.add_argument("--batch", action="store_true", help="Non-interactive mode with silent logging")
-    
+    parser = argparse.ArgumentParser(description="Simulação Mini-Overcooked")
+    parser.add_argument(
+        "layout",
+        nargs="?",
+        default="layouts/overcooked1.json",
+        help="Caminho para o arquivo de layout (padrão: layouts/overcooked1.json)",
+    )
+    parser.add_argument(
+        "--auto",
+        action="store_true",
+        help="Modo automático: executa sem interação, gera apenas out/render.txt",
+    )
+
     args = parser.parse_args()
     layout_path = args.layout
+    interactive = not args.auto
 
-    # Output: save only the environment render
+    # Diretório de saída dos renders
     out_dir = "out"
     os.makedirs(out_dir, exist_ok=True)
     render_path = os.path.join(out_dir, "render.txt")
-    
-    # 1. Carrega dados
+
+    # 1. Lê o layout JSON e constrói os pedidos
     layout, orders, max_steps = load_kitchen_data(layout_path)
     initial_state = create_initial_state(layout, orders)
-    
-    # 2. Inicializa Ambiente
+
+    # 2. Inicializa o ambiente, o agente com sua heurística e registra o agente
     env = KitchenEnvironment(initial_state)
-    
-    # 3. Inicializa o Agente com sua Heurística
     problem = KitchenProblem(initial_state)
     agent = KitchenAgent(heuristic=problem.h)
-    
-    # Adicionamos o agente ao ambiente
     env.add_thing(agent)
 
-    render_f = open(render_path, "w", encoding="utf-8")
-    try:
-        render_f.write(f"--- Render Log ({layout_path}) ---\n")
-        render_f.write("\n--- Initial State ---\n")
-        env.render(out=render_f, quiet=args.batch)
-    
-        if not args.batch:
-            print(f"--- Initial State ({layout_path}) ---")
-            env.render()
+    # 3. Renderiza e registra o estado inicial
+    render_lines = [f"--- Render Log ({layout_path}) ---\n", "\n--- Estado Inicial ---\n"]
+    initial_render = env.render(quiet=True)
+    render_lines.append(initial_render)
 
-        # 4. Simulação: Avança o ambiente até o objetivo ou limite
-        for step in range(max_steps):
-            if not args.batch:
-                print(f"\n--- Step {step + 1} / {max_steps} ---")
+    if interactive:
+        _clear_screen()  # limpa o terminal antes de exibir
+        print(f"=== Mini-Overcooked | Level: {layout_path} ===")
+        print("\n--- Estado Inicial ---")
+        print(initial_render)
+        # Salva o estado inicial como step 000
+        step_path = os.path.join(out_dir, "step_000.txt")
+        with open(step_path, "w", encoding="utf-8") as sf:
+            sf.write("--- Estado Inicial ---\n")
+            sf.write(initial_render)
+        _wait_for_key()
 
-            # O ambiente obtém a percepção, passa para o agente,
-            # e executa a ação retornada pelo programa do agente.
-            env.step()
+    # 4. Loop principal da simulação
+    for step in range(1, max_steps + 1):
+        env.step()
 
-            render_f.write(f"\n--- Step {step + 1} ---\n")
-            env.render(out=render_f, quiet=args.batch)
+        step_render = env.render(quiet=True)
+        step_header = f"\n--- Step {step} / {max_steps} ---\n"
+        render_lines.append(step_header)
+        render_lines.append(step_render)
 
-            if not args.batch:
-                env.render()
+        if interactive:
+            _clear_screen()
+            print(f"=== Mini-Overcooked | Level: {layout_path} ===")
+            print(f"--- Step {step} / {max_steps} ---")
+            print(step_render)
+            # Salva o estado atual em arquivo individual
+            step_path = os.path.join(out_dir, f"step_{step:03d}.txt")
+            with open(step_path, "w", encoding="utf-8") as sf:
+                sf.write(f"--- Step {step} ---\n")
+                sf.write(step_render)
 
-            if args.debug:
-                input("\n[DEBUG] Press ENTER to continue to the next step...")
+        # Verifica se o objetivo foi alcançado
+        if len(env.state.active_orders) == 0:
+            msg = "\n[Simulação] Todos os pedidos entregues! Objetivo alcançado."
+            print(msg)
+            render_lines.append(msg + "\n")
+            break
 
-            if len(env.state.active_orders) == 0:
-                print("\n[Simulation] All orders delivered! Goal reached.")
-                break
-        else:
-            print("\n[Simulation] Max steps reached.")
+        if interactive:
+            _wait_for_key()
+    else:
+        msg = "\n[Simulação] Limite de steps atingido."
+        print(msg)
+        render_lines.append(msg + "\n")
 
-    finally:
-        render_f.close()
+    # 5. Salva o log completo em render.txt
+    with open(render_path, "w", encoding="utf-8") as rf:
+        rf.write("".join(render_lines))
 
-    print(f"\n[Simulation] Finished. Render saved to {render_path}.")
+    print(f"\n[Simulação] Finalizada. Render salvo em {render_path}.")
+
 
 if __name__ == "__main__":
     run()

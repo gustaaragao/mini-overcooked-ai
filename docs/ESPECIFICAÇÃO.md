@@ -2,76 +2,164 @@
 # Especificação Formal do Problema
 
 ## 0. Simplificações
-- Não podemos remover a panela do fogão. (Posso remover essa simplificação)
-- Os mapas são iguais ao do jogo original, exceto por dois pontos:
-    - Apenas um cozinheiro --> Apenas um agente
-    - Sem obstáculos
-- A fila de pedidos é simplificada.
+- Apenas um cozinheiro → apenas um agente.
+- Mapas baseados no Overcooked original, sem obstáculos dinâmicos.
+- A fila de pedidos é sequencial (não há novos pedidos chegando durante a simulação).
+- A panela (tile `K`) não pode ser removida do fogão — ela é fixa no mapa.
 
 ## 1. Ambiente
+
 O ambiente é uma grade 2D representando uma cozinha. Cada célula pode conter (ou ser):
 
-- `.` : Chão (passável)
-- `#` : Parede (impasável)
-- `C` : Balcão (armazenamento)
-- `S` : Fogão (cozimento)
-- `T` ou `B` : Tábua de Corte (preparação/corte)
-- `D` : Entrega
-- `G` : Lixeira
-- `E` : Balcão com Extintor
-- `P` : Balcão com Prato (Sujo ou Limpo)
-- `O` : Fonte Infinita de Cebola (Onion Source)
-- `W` : Pia (Sink) para lavar pratos sujos
+| Tile | Descrição |
+|------|-----------|
+| `.`  | Chão (passável) |
+| `#`  | Parede (impasável) |
+| `C`  | Balcão (armazenamento genérico) |
+| `S`  | Fogão (cozimento simples — 1 ingrediente) |
+| `T` / `B` | Tábua de Corte (preparação/corte) |
+| `K`  | **Panela** no fogão (cozimento multi-ingrediente — sopas) |
+| `D`  | Entrega |
+| `G`  | Lixeira |
+| `E`  | Balcão com Extintor |
+| `P`  | Balcão com Prato (sujo ou limpo) |
+| `O`  | Fonte Infinita de Cebola |
+| `V`  | Fonte Infinita de Tomate |
+| `W`  | Pia (lavar pratos sujos) |
 
-## 2. Estado Inicial
-Definido via arquivos JSON em `layouts/`, contendo a posição inicial do agente, o layout do grid, e a lista de pedidos (`active_orders`).
+## 2. Estado
 
-## 3. Conjunto de Ações
-- `Move(x, y)`: Move o agente para uma célula adjacente livre.
-- `PickUp(item, state, x, y)`: Pega um item de um balcão ou estação adjacente. Pode ser usado para pegar um ingrediente diretamente em um prato limpo que o agente esteja segurando.
-- `PutDown(item, state, x, y)`: Coloca o item segurado em um balcão ou estação adjacente. Se colocado em um prato no balcão, inicia a montagem.
-- `Chop(x, y)`: Processa um ingrediente em uma tábua de corte ('T' ou 'B').
-- `Wait(x, y)`: Aguarda o progresso de cozimento em um fogão ou lavagem na pia.
-- `Deliver(x, y)`: Entrega o prato finalizado.
-- `Extinguish(x, y)`: Apaga o fogo em uma estação usando um extintor.
+```
+KitchenState(
+    agent_pos       : (x, y)
+    held_item       : Ingredient | Plate | Extinguisher | Pot | None
+    layout          : grade estática (imutável)
+    grid_objects    : ((pos, item), ...)  — itens sobre balcões
+    active_orders   : (Order, ...)
+    delivered_orders: (Order, ...)
+    stations_state  : ((pos, StationState), ...)  — fogões, tábuas, pias, panelas
+    time            : int
+)
+```
 
-## 4. Modelo de Transição (result(s, a))
-- Ações de movimento mudam a posição do agente.
-- `PickUp`/`PutDown` alteram `held_item` e `grid_objects` ou `stations_state`.
-- `Chop` incrementa o progresso na estação 'T' ou 'B' até que o ingrediente mude para `chopped`.
-- O tempo progride globalmente para fogões ('S') e pias ('W').
-- Fogões incrementam o progresso se houver um ingrediente `chopped`, podendo chegar a `cooked` e, se exceder o limite (`BURN_LIMIT`), entrar em estado `is_on_fire`.
-- Pias incrementam o progresso se houver um prato `dirty`, mudando-o para `clean` após o tempo necessário.
-- `Deliver` remove o prato com comida, completa o pedido e gera um prato sujo em um balcão de retorno ou disponível.
+### Receitas (`Recipe`)
 
-## 5. Teste de objetivo (goal_test)
-Verdadeiro quando `active_orders` está vazio.
+```
+Recipe(
+    name  : str
+    steps : (RecipeStep, ...)
+)
 
-## 6. Custo do caminho (path_cost)
-- Custo unitário para a maioria das ações.
-- Ações de `Wait` possuem custo levemente superior (1.1) para incentivar o agente a realizar outras tarefas produtivas enquanto espera.
+RecipeStep(
+    ingredient    : str
+    required_state: str   # RAW | CHOPPED | COOKED
+    quantity      : int
+)
+```
+
+Cada `Order` pode ter um campo opcional `recipe`.
+
+### Panela (`Pot`)
+
+```
+Pot(
+    ingredients: (str, ...)   # nomes dos ingredientes já adicionados
+    state      : str          # EMPTY | FILLING | COOKING | READY
+    progress   : int
+)
+```
+
+A panela começa `EMPTY`. Cada `PutInPot` adiciona um ingrediente:
+- Ao adicionar o **último** ingrediente necessário → estado passa para `COOKING`.
+- Após `POT_COOK_DURATION` ticks → estado passa para `READY`.
+- Em `READY`, o agente pode `ServeFromPot` → o conteúdo vai para o prato.
+
+## 3. Estado Inicial
+
+Definido via arquivos JSON em `layouts/`. O campo `A` no layout define a posição inicial do agente. Tiles `P` e `E` geram objetos iniciais (`Plate(CLEAN)`, `Extinguisher`) nos balcões correspondentes. Tile `K` gera uma `StationState` com `Pot()` vazio.
+
+## 4. Conjunto de Ações
+
+| Ação | Descrição |
+|------|-----------|
+| `Move(x, y)` | Move o agente para uma célula `.` adjacente |
+| `PickUp(item, state, x, y)` | Pega item de balcão, estação, fonte (`O`/`V`) ou do conteúdo da estação |
+| `PutDown(item, state, x, y)` | Coloca item em balcão (`C`, `E`, `P`) ou estação (`S`, `T`, `B`, `W`) |
+| `PutInPot(ingredient, x, y)` | Coloca ingrediente `CHOPPED` na panela `K` |
+| `ServeFromPot(x, y)` | Transfere sopa pronta da panela para o prato limpo |
+| `Chop(x, y)` | Processa ingrediente na tábua de corte (incrementa progresso) |
+| `Wait(x, y)` | Aguarda cozimento (`S`/`K`) ou lavagem (`W`) |
+| `Deliver(x, y)` | Entrega prato `WITH_FOOD` na estação `D`, validando receita |
+| `Extinguish(x, y)` | Apaga fogo com extintor |
+
+## 5. Modelo de Transição (`result(s, a)`)
+
+- `Move` altera `agent_pos`.
+- `PickUp`/`PutDown` alteram `held_item`, `grid_objects` ou `stations_state`.
+- `PutInPot` adiciona ingrediente à `Pot.ingredients`; ao completar, muda para `COOKING`.
+- `ServeFromPot` copia `Pot.ingredients` para `Plate.contents` e reseta a `Pot` para vazia.
+- `Chop` incrementa progresso na `StationState`; ao atingir `CHOP_DURATION`, ingrediente → `CHOPPED`.
+- **Progresso global por tick** (aplicado em todo `result`):
+  - Fogão (`S`): ingrediente `CHOPPED` → progresso; ao atingir `COOK_DURATION` → `COOKED`; ao atingir `BURN_LIMIT` → `BURNT` + fogo.
+  - Pia (`W`): prato `DIRTY` → progresso; ao atingir `WASH_DURATION` → `CLEAN`.
+  - Panela (`K`): estado `COOKING` → progresso; ao atingir `POT_COOK_DURATION` → `READY`.
+- `Deliver` valida `Plate.contents` contra `order.recipe` (ou `order.ingredients`); remove pedido de `active_orders` e gera prato `DIRTY`.
+
+## 6. Teste de Objetivo (`goal_test`)
+
+Verdadeiro quando `len(active_orders) == 0`.
+
+## 7. Custo do Caminho (`path_cost`)
+
+- Custo 1 para a maioria das ações.
+- `Wait` tem custo 1.1 para incentivar o agente a realizar tarefas paralelas.
+
+---
 
 # Classificação do Ambiente
-- **Determinístico**: As ações resultam em estados previsíveis.
-- **Totalmente Observável**: O agente conhece todo o grid e o estado de todas as estações.
-- **Estático**: O ambiente só muda através das ações do agente (ou do progresso de tempo vinculado às ações).
-- **Discreto**: Grade de células e estados bem definidos.
-- **Agente Único**: Apenas um agente AI opera na cozinha.
+
+| Dimensão | Classificação | Justificativa |
+|----------|---------------|---------------|
+| Observabilidade | **Totalmente observável** | O agente recebe todo o `KitchenState` como percepção |
+| Dinamismo | **Estático** | O ambiente só muda via ações do agente (ou progresso vinculado a elas) |
+| Determinismo | **Determinístico** | Cada `(estado, ação)` produz exatamente um novo estado |
+| Discretização | **Discreto** | Grade de células e estados finitos bem definidos |
+| Número de agentes | **Agente único** | Um único agente AI opera na cozinha |
+
+---
 
 # Algoritmos de Busca e Heurística
-- **A* Search**: Utilizado para encontrar o plano ótimo.
 
-## Heurísticas
-A heurística $h(n)$ combina distância de Manhattan com custo de processamento e bônus de progresso. A prioridade é definida da seguinte forma:
+## A* com Limites (`astar_search_with_limit`)
 
-1.  **Fogo**: Se houver fogo, a prioridade máxima é buscar o extintor (se não estiver segurando um) e apagar as chamas.
-2.  **Entrega**: Se o agente estiver segurando um prato com comida (`WITH_FOOD`) ou um prato limpo com ingredientes cozidos/cortados, ele prioriza a entrega ou a finalização do prato.
-3.  **Processamento**: Se não houver emergências, o agente busca ingredientes, leva para as tábuas de corte, depois para os fogões e, finalmente, para os pratos.
+Utilizamos nossa própria implementação de A*, equivalente ao `astar_search` do aima3, mas com dois mecanismos de proteção:
 
-A heurística $h(n)$ é calculada como:
-$h(n) = \min(\text{distância\_Manhattan\_alvos}) + \text{custo\_extra\_processamento} + (60 - \text{bonus\_progresso})$
+- **`max_expansions`** (padrão: 50 000 / 100 000): limite de nós expandidos.
+- **`max_time_s`** (padrão: 5 s): limite de tempo real.
 
-- `bonus_progresso` aumenta conforme o agente avança na cadeia de produção (ex: segurar prato com comida dá um bônus maior que segurar cebola crua).
-- `custo_extra_processamento` reflete o tempo fixo necessário em estações (ex: `CHOP_DURATION`, `COOK_DURATION`).
+**Justificativa**: Com receitas multi-ingrediente, o espaço de estados cresce exponencialmente (cada estado da panela, posição do agente e ingredientes combinados). A implementação padrão do aima3 não possui proteção contra timeout, o que causaria travamentos ao buscar sub-objetivos com muitos passos.
 
-A heurística busca ser informativa para guiar o A* eficientemente, priorizando estados que levam à conclusão dos pedidos.
+O agente usa **decomposição por sub-objetivos**: em vez de buscar o plano completo de uma vez, identifica o próximo sub-objetivo alcançável (ex: "colocar próxima cebola na panela") e busca apenas esse sub-objetivo. Isso mantém o espaço de busca pequeno o suficiente para o A* sem limites, mas os limites servem como **salvaguarda** caso o sub-objetivo seja mal formulado.
+
+## Heurística `h(n)`
+
+A heurística é admissível e estima o custo mínimo restante usando **distância de Manhattan** + custos fixos de processamento:
+
+### Prioridade (em ordem):
+1. **Fogo**: custo = distância ao extintor + distância ao fogo.
+2. **Prato `WITH_FOOD`**: custo = distância à entrega.
+3. **Panela `READY`**: custo = distância ao prato limpo + distância à panela + distância à entrega.
+4. **Panela `COOKING`**: custo = `POT_COOK_DURATION - progresso` + distância à entrega.
+5. **Panela `FILLING`**: soma de (fonte → tábua + `CHOP_DURATION` + tábua → panela) para cada ingrediente faltando + `POT_COOK_DURATION` + distância à entrega.
+6. **Sem panela (receita simples)**: custo estimado para o ciclo fonte → tábua → fogão → prato → entrega.
+
+## Receitas Suportadas (Levels 1-1 a 1-6)
+
+| Level | Tipo | Receitas |
+|-------|------|---------|
+| 1-1 | Sopa | Sopa de Cebola (3× cebola picada → panela → servir) |
+| 1-2 | Sopa | Sopa de Cebola, Sopa de Tomate, Sopa Mista |
+| 1-3 | Sopa | Mesmas do 1-2 (sem pia) |
+| 1-4 | Hambúrguer | Simples, com Alface, com Tomate, Completo |
+| 1-5 | Sopa | Sopa de Cebola e Sopa de Tomate (cozinha dividida) |
+| 1-6 | Hambúrguer | Simples, com Tomate, Completo (cozinha maior) |

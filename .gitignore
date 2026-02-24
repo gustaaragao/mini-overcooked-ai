@@ -4,6 +4,10 @@
 ### IDE ###
 .gemini
 GEMINI.md
+AGENTS.md
+.vscode/
+.opencode/
+.gemini/
 openspec/
 
 ### Python ###

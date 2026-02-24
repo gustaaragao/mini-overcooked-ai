@@ -1,12 +1,12 @@
 --- Render Log (layouts/overcooked1.json) ---
 
---- Initial State ---
+--- Estado Inicial ---
 
-Time: 0 | Holding: Nothing
+Tempo: 0 | Segurando: Nada
 +---------------------------------------------+
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
-| #  C  C  C  O  C  C  C  C  S  C  C  C  C  # |
-| #  C  .  .  .  .  .  .  .  .  .  .  .  E  # |
+| #  C  C  C  O  C  C  C  C  k  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  A  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
 | #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
@@ -16,15 +16,19 @@ Time: 0 | Holding: Nothing
 | #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
 +---------------------------------------------+
-Active Orders: ['Onion']
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
 
---- Step 1 ---
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
 
-Time: 1 | Holding: Nothing
+--- Step 1 / 300 ---
+
+Tempo: 1 | Segurando: Nada
 +---------------------------------------------+
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
-| #  C  C  C  O  C  C  C  C  S  C  C  C  C  # |
-| #  C  .  .  .  A  .  .  .  .  .  .  .  E  # |
+| #  C  C  C  O  C  C  C  C  k  C  C  C  C  # |
+| #  C  .  .  .  A  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
 | #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
@@ -34,15 +38,19 @@ Time: 1 | Holding: Nothing
 | #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
 +---------------------------------------------+
-Active Orders: ['Onion']
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
 
---- Step 2 ---
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
 
-Time: 2 | Holding: Nothing
+--- Step 2 / 300 ---
+
+Tempo: 2 | Segurando: Nada
 +---------------------------------------------+
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
-| #  C  C  C  O  C  C  C  C  S  C  C  C  C  # |
-| #  C  .  .  A  .  .  .  .  .  .  .  .  E  # |
+| #  C  C  C  O  C  C  C  C  k  C  C  C  C  # |
+| #  C  .  .  A  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
 | #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
@@ -52,15 +60,19 @@ Time: 2 | Holding: Nothing
 | #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
 +---------------------------------------------+
-Active Orders: ['Onion']
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
 
---- Step 3 ---
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
 
-Time: 3 | Holding: Onion(RAW)
+--- Step 3 / 300 ---
+
+Tempo: 3 | Segurando: Onion(RAW)
 +---------------------------------------------+
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
-| #  C  C  C  O  C  C  C  C  S  C  C  C  C  # |
-| #  C  .  .  A  .  .  .  .  .  .  .  .  E  # |
+| #  C  C  C  O  C  C  C  C  k  C  C  C  C  # |
+| #  C  .  .  A  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
 | #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
@@ -70,15 +82,19 @@ Time: 3 | Holding: Onion(RAW)
 | #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
 +---------------------------------------------+
-Active Orders: ['Onion']
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
 
---- Step 4 ---
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
 
-Time: 4 | Holding: Onion(RAW)
+--- Step 4 / 300 ---
+
+Tempo: 4 | Segurando: Onion(RAW)
 +---------------------------------------------+
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
-| #  C  C  C  O  C  C  C  C  S  C  C  C  C  # |
-| #  C  .  .  .  .  .  .  .  .  .  .  .  E  # |
+| #  C  C  C  O  C  C  C  C  k  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  A  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
 | #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
@@ -88,15 +104,19 @@ Time: 4 | Holding: Onion(RAW)
 | #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
 +---------------------------------------------+
-Active Orders: ['Onion']
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
 
---- Step 5 ---
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
 
-Time: 5 | Holding: Onion(RAW)
+--- Step 5 / 300 ---
+
+Tempo: 5 | Segurando: Onion(RAW)
 +---------------------------------------------+
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
-| #  C  C  C  O  C  C  C  C  S  C  C  C  C  # |
-| #  C  .  .  .  .  .  .  .  .  .  .  .  E  # |
+| #  C  C  C  O  C  C  C  C  k  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  A  .  .  .  .  .  .  .  .  W  # |
 | #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
@@ -106,15 +126,19 @@ Time: 5 | Holding: Onion(RAW)
 | #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
 +---------------------------------------------+
-Active Orders: ['Onion']
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
 
---- Step 6 ---
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
 
-Time: 6 | Holding: Onion(RAW)
+--- Step 6 / 300 ---
+
+Tempo: 6 | Segurando: Onion(RAW)
 +---------------------------------------------+
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
-| #  C  C  C  O  C  C  C  C  S  C  C  C  C  # |
-| #  C  .  .  .  .  .  .  .  .  .  .  .  E  # |
+| #  C  C  C  O  C  C  C  C  k  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  A  .  .  .  .  .  .  .  W  # |
 | #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
@@ -124,15 +148,19 @@ Time: 6 | Holding: Onion(RAW)
 | #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
 +---------------------------------------------+
-Active Orders: ['Onion']
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
 
---- Step 7 ---
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
 
-Time: 7 | Holding: Onion(RAW)
+--- Step 7 / 300 ---
+
+Tempo: 7 | Segurando: Onion(RAW)
 +---------------------------------------------+
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
-| #  C  C  C  O  C  C  C  C  S  C  C  C  C  # |
-| #  C  .  .  .  .  .  .  .  .  .  .  .  E  # |
+| #  C  C  C  O  C  C  C  C  k  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  A  .  .  .  .  .  .  W  # |
 | #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
@@ -142,15 +170,19 @@ Time: 7 | Holding: Onion(RAW)
 | #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
 +---------------------------------------------+
-Active Orders: ['Onion']
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
 
---- Step 8 ---
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
 
-Time: 8 | Holding: Onion(RAW)
+--- Step 8 / 300 ---
+
+Tempo: 8 | Segurando: Onion(RAW)
 +---------------------------------------------+
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
-| #  C  C  C  O  C  C  C  C  S  C  C  C  C  # |
-| #  C  .  .  .  .  .  .  .  .  .  .  .  E  # |
+| #  C  C  C  O  C  C  C  C  k  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  A  .  .  .  .  .  W  # |
 | #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
@@ -160,15 +192,19 @@ Time: 8 | Holding: Onion(RAW)
 | #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
 +---------------------------------------------+
-Active Orders: ['Onion']
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
 
---- Step 9 ---
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
 
-Time: 9 | Holding: Onion(RAW)
+--- Step 9 / 300 ---
+
+Tempo: 9 | Segurando: Onion(RAW)
 +---------------------------------------------+
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
-| #  C  C  C  O  C  C  C  C  S  C  C  C  C  # |
-| #  C  .  .  .  .  .  .  .  .  .  .  .  E  # |
+| #  C  C  C  O  C  C  C  C  k  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  A  .  .  .  .  W  # |
 | #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
@@ -178,15 +214,19 @@ Time: 9 | Holding: Onion(RAW)
 | #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
 +---------------------------------------------+
-Active Orders: ['Onion']
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
 
---- Step 10 ---
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
 
-Time: 10 | Holding: Onion(RAW)
+--- Step 10 / 300 ---
+
+Tempo: 10 | Segurando: Onion(RAW)
 +---------------------------------------------+
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
-| #  C  C  C  O  C  C  C  C  S  C  C  C  C  # |
-| #  C  .  .  .  .  .  .  .  .  .  .  .  E  # |
+| #  C  C  C  O  C  C  C  C  k  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  A  .  .  .  W  # |
 | #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
@@ -196,15 +236,19 @@ Time: 10 | Holding: Onion(RAW)
 | #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
 +---------------------------------------------+
-Active Orders: ['Onion']
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
 
---- Step 11 ---
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
 
-Time: 11 | Holding: Onion(RAW)
+--- Step 11 / 300 ---
+
+Tempo: 11 | Segurando: Onion(RAW)
 +---------------------------------------------+
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
-| #  C  C  C  O  C  C  C  C  S  C  C  C  C  # |
-| #  C  .  .  .  .  .  .  .  .  .  .  .  E  # |
+| #  C  C  C  O  C  C  C  C  k  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  A  .  .  W  # |
 | #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
@@ -214,15 +258,19 @@ Time: 11 | Holding: Onion(RAW)
 | #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
 +---------------------------------------------+
-Active Orders: ['Onion']
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
 
---- Step 12 ---
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
 
-Time: 12 | Holding: Onion(RAW)
+--- Step 12 / 300 ---
+
+Tempo: 12 | Segurando: Onion(RAW)
 +---------------------------------------------+
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
-| #  C  C  C  O  C  C  C  C  S  C  C  C  C  # |
-| #  C  .  .  .  .  .  .  .  .  .  .  .  E  # |
+| #  C  C  C  O  C  C  C  C  k  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  A  .  W  # |
 | #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
@@ -232,15 +280,19 @@ Time: 12 | Holding: Onion(RAW)
 | #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
 +---------------------------------------------+
-Active Orders: ['Onion']
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
 
---- Step 13 ---
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
 
-Time: 13 | Holding: Onion(RAW)
+--- Step 13 / 300 ---
+
+Tempo: 13 | Segurando: Onion(RAW)
 +---------------------------------------------+
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
-| #  C  C  C  O  C  C  C  C  S  C  C  C  C  # |
-| #  C  .  .  .  .  .  .  .  .  .  .  .  E  # |
+| #  C  C  C  O  C  C  C  C  k  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
 | #  C  C  C  C  C  C  C  C  C  C  A  .  W  # |
@@ -250,15 +302,19 @@ Time: 13 | Holding: Onion(RAW)
 | #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
 +---------------------------------------------+
-Active Orders: ['Onion']
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
 
---- Step 14 ---
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
 
-Time: 14 | Holding: Onion(RAW)
+--- Step 14 / 300 ---
+
+Tempo: 14 | Segurando: Onion(RAW)
 +---------------------------------------------+
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
-| #  C  C  C  O  C  C  C  C  S  C  C  C  C  # |
-| #  C  .  .  .  .  .  .  .  .  .  .  .  E  # |
+| #  C  C  C  O  C  C  C  C  k  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
 | #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
@@ -268,15 +324,19 @@ Time: 14 | Holding: Onion(RAW)
 | #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
 +---------------------------------------------+
-Active Orders: ['Onion']
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
 
---- Step 15 ---
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
 
-Time: 15 | Holding: Onion(RAW)
+--- Step 15 / 300 ---
+
+Tempo: 15 | Segurando: Onion(RAW)
 +---------------------------------------------+
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
-| #  C  C  C  O  C  C  C  C  S  C  C  C  C  # |
-| #  C  .  .  .  .  .  .  .  .  .  .  .  E  # |
+| #  C  C  C  O  C  C  C  C  k  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
 | #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
@@ -286,15 +346,19 @@ Time: 15 | Holding: Onion(RAW)
 | #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
 +---------------------------------------------+
-Active Orders: ['Onion']
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
 
---- Step 16 ---
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
 
-Time: 16 | Holding: Onion(RAW)
+--- Step 16 / 300 ---
+
+Tempo: 16 | Segurando: Onion(RAW)
 +---------------------------------------------+
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
-| #  C  C  C  O  C  C  C  C  S  C  C  C  C  # |
-| #  C  .  .  .  .  .  .  .  .  .  .  .  E  # |
+| #  C  C  C  O  C  C  C  C  k  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
 | #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
@@ -304,15 +368,19 @@ Time: 16 | Holding: Onion(RAW)
 | #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
 +---------------------------------------------+
-Active Orders: ['Onion']
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
 
---- Step 17 ---
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
 
-Time: 17 | Holding: Onion(RAW)
+--- Step 17 / 300 ---
+
+Tempo: 17 | Segurando: Onion(RAW)
 +---------------------------------------------+
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
-| #  C  C  C  O  C  C  C  C  S  C  C  C  C  # |
-| #  C  .  .  .  .  .  .  .  .  .  .  .  E  # |
+| #  C  C  C  O  C  C  C  C  k  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
 | #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
@@ -322,15 +390,19 @@ Time: 17 | Holding: Onion(RAW)
 | #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
 +---------------------------------------------+
-Active Orders: ['Onion']
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
 
---- Step 18 ---
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
 
-Time: 18 | Holding: Onion(RAW)
+--- Step 18 / 300 ---
+
+Tempo: 18 | Segurando: Onion(RAW)
 +---------------------------------------------+
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
-| #  C  C  C  O  C  C  C  C  S  C  C  C  C  # |
-| #  C  .  .  .  .  .  .  .  .  .  .  .  E  # |
+| #  C  C  C  O  C  C  C  C  k  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
 | #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
@@ -340,15 +412,19 @@ Time: 18 | Holding: Onion(RAW)
 | #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
 +---------------------------------------------+
-Active Orders: ['Onion']
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
 
---- Step 19 ---
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
 
-Time: 19 | Holding: Onion(RAW)
+--- Step 19 / 300 ---
+
+Tempo: 19 | Segurando: Onion(RAW)
 +---------------------------------------------+
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
-| #  C  C  C  O  C  C  C  C  S  C  C  C  C  # |
-| #  C  .  .  .  .  .  .  .  .  .  .  .  E  # |
+| #  C  C  C  O  C  C  C  C  k  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
 | #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
@@ -358,15 +434,19 @@ Time: 19 | Holding: Onion(RAW)
 | #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
 +---------------------------------------------+
-Active Orders: ['Onion']
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
 
---- Step 20 ---
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
 
-Time: 20 | Holding: Onion(RAW)
+--- Step 20 / 300 ---
+
+Tempo: 20 | Segurando: Onion(RAW)
 +---------------------------------------------+
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
-| #  C  C  C  O  C  C  C  C  S  C  C  C  C  # |
-| #  C  .  .  .  .  .  .  .  .  .  .  .  E  # |
+| #  C  C  C  O  C  C  C  C  k  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
 | #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
@@ -376,15 +456,19 @@ Time: 20 | Holding: Onion(RAW)
 | #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
 +---------------------------------------------+
-Active Orders: ['Onion']
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
 
---- Step 21 ---
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
 
-Time: 21 | Holding: Onion(RAW)
+--- Step 21 / 300 ---
+
+Tempo: 21 | Segurando: Onion(RAW)
 +---------------------------------------------+
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
-| #  C  C  C  O  C  C  C  C  S  C  C  C  C  # |
-| #  C  .  .  .  .  .  .  .  .  .  .  .  E  # |
+| #  C  C  C  O  C  C  C  C  k  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
 | #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
@@ -394,15 +478,19 @@ Time: 21 | Holding: Onion(RAW)
 | #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
 +---------------------------------------------+
-Active Orders: ['Onion']
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
 
---- Step 22 ---
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
 
-Time: 22 | Holding: Nothing
+--- Step 22 / 300 ---
+
+Tempo: 22 | Segurando: Nada
 +---------------------------------------------+
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
-| #  C  C  C  O  C  C  C  C  S  C  C  C  C  # |
-| #  C  .  .  .  .  .  .  .  .  .  .  .  E  # |
+| #  C  C  C  O  C  C  C  C  k  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
 | #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
@@ -412,16 +500,20 @@ Time: 22 | Holding: Nothing
 | #  C  C  C  T  C  o  C  C  C  P  P  C  C  # |
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
 +---------------------------------------------+
-Active Orders: ['Onion']
-  Station at (6, 9): Onion(RAW) | Progress: 0 
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
+  Estação em (6, 9): Onion(RAW) | Progresso: 0
 
---- Step 23 ---
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
 
-Time: 23 | Holding: Nothing
+--- Step 23 / 300 ---
+
+Tempo: 23 | Segurando: Nada
 +---------------------------------------------+
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
-| #  C  C  C  O  C  C  C  C  S  C  C  C  C  # |
-| #  C  .  .  .  .  .  .  .  .  .  .  .  E  # |
+| #  C  C  C  O  C  C  C  C  k  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
 | #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
@@ -431,16 +523,20 @@ Time: 23 | Holding: Nothing
 | #  C  C  C  T  C  o  C  C  C  P  P  C  C  # |
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
 +---------------------------------------------+
-Active Orders: ['Onion']
-  Station at (6, 9): Onion(RAW) | Progress: 1 
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
+  Estação em (6, 9): Onion(RAW) | Progresso: 1
 
---- Step 24 ---
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
 
-Time: 24 | Holding: Nothing
+--- Step 24 / 300 ---
+
+Tempo: 24 | Segurando: Nada
 +---------------------------------------------+
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
-| #  C  C  C  O  C  C  C  C  S  C  C  C  C  # |
-| #  C  .  .  .  .  .  .  .  .  .  .  .  E  # |
+| #  C  C  C  O  C  C  C  C  k  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
 | #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
@@ -450,16 +546,20 @@ Time: 24 | Holding: Nothing
 | #  C  C  C  T  C  o  C  C  C  P  P  C  C  # |
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
 +---------------------------------------------+
-Active Orders: ['Onion']
-  Station at (6, 9): Onion(RAW) | Progress: 2 
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
+  Estação em (6, 9): Onion(RAW) | Progresso: 2
 
---- Step 25 ---
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
 
-Time: 25 | Holding: Nothing
+--- Step 25 / 300 ---
+
+Tempo: 25 | Segurando: Nada
 +---------------------------------------------+
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
-| #  C  C  C  O  C  C  C  C  S  C  C  C  C  # |
-| #  C  .  .  .  .  .  .  .  .  .  .  .  E  # |
+| #  C  C  C  O  C  C  C  C  k  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
 | #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
@@ -469,283 +569,3098 @@ Time: 25 | Holding: Nothing
 | #  C  C  C  T  C  o  C  C  C  P  P  C  C  # |
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
 +---------------------------------------------+
-Active Orders: ['Onion']
-  Station at (6, 9): Onion(CHOPPED) | Progress: 0 
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
+  Estação em (6, 9): Onion(CHOPPED) | Progresso: 0
 
---- Step 26 ---
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
 
-Time: 26 | Holding: Nothing
+--- Step 26 / 300 ---
+
+Tempo: 26 | Segurando: Onion(CHOPPED)
 +---------------------------------------------+
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
-| #  C  C  C  O  C  C  C  C  S  C  C  C  C  # |
-| #  C  .  .  .  .  .  .  .  .  .  .  .  E  # |
+| #  C  C  C  O  C  C  C  C  k  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
 | #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
 | #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
-| #  D  .  .  .  .  .  A  .  .  .  .  .  G  # |
-| #  C  C  C  T  C  o  C  C  C  P  P  C  C  # |
+| #  D  .  .  .  .  A  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
 +---------------------------------------------+
-Active Orders: ['Onion']
-  Station at (6, 9): Onion(CHOPPED) | Progress: 0 
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
 
---- Step 27 ---
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
 
-Time: 27 | Holding: Nothing
+--- Step 27 / 300 ---
+
+Tempo: 27 | Segurando: Onion(CHOPPED)
 +---------------------------------------------+
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
-| #  C  C  C  O  C  C  C  C  S  C  C  C  C  # |
-| #  C  .  .  .  .  .  .  .  .  .  .  .  E  # |
+| #  C  C  C  O  C  C  C  C  k  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  A  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 28 / 300 ---
+
+Tempo: 28 | Segurando: Onion(CHOPPED)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  k  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  A  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 29 / 300 ---
+
+Tempo: 29 | Segurando: Onion(CHOPPED)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  k  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  A  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 30 / 300 ---
+
+Tempo: 30 | Segurando: Onion(CHOPPED)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  k  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  A  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 31 / 300 ---
+
+Tempo: 31 | Segurando: Onion(CHOPPED)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  k  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  A  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 32 / 300 ---
+
+Tempo: 32 | Segurando: Onion(CHOPPED)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  k  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  A  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 33 / 300 ---
+
+Tempo: 33 | Segurando: Onion(CHOPPED)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  k  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  A  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 34 / 300 ---
+
+Tempo: 34 | Segurando: Onion(CHOPPED)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  k  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  A  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 35 / 300 ---
+
+Tempo: 35 | Segurando: Onion(CHOPPED)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  k  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  A  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 36 / 300 ---
+
+Tempo: 36 | Segurando: Onion(CHOPPED)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  k  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  A  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 37 / 300 ---
+
+Tempo: 37 | Segurando: Onion(CHOPPED)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  k  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  A  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
 | #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
 | #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
-| #  D  .  .  .  .  .  .  A  .  .  .  .  G  # |
-| #  C  C  C  T  C  o  C  C  C  P  P  C  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
 +---------------------------------------------+
-Active Orders: ['Onion']
-  Station at (6, 9): Onion(CHOPPED) | Progress: 0 
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
 
---- Step 28 ---
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
 
-Time: 28 | Holding: Nothing
+--- Step 38 / 300 ---
+
+Tempo: 38 | Segurando: Onion(CHOPPED)
 +---------------------------------------------+
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
-| #  C  C  C  O  C  C  C  C  S  C  C  C  C  # |
-| #  C  .  .  .  .  .  .  .  .  .  .  .  E  # |
+| #  C  C  C  O  C  C  C  C  k  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  A  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
 | #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
 | #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
-| #  D  .  .  .  .  .  .  .  A  .  .  .  G  # |
-| #  C  C  C  T  C  o  C  C  C  P  P  C  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
 +---------------------------------------------+
-Active Orders: ['Onion']
-  Station at (6, 9): Onion(CHOPPED) | Progress: 0 
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
 
---- Step 29 ---
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
 
-Time: 29 | Holding: Nothing
+--- Step 39 / 300 ---
+
+Tempo: 39 | Segurando: Onion(CHOPPED)
 +---------------------------------------------+
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
-| #  C  C  C  O  C  C  C  C  S  C  C  C  C  # |
-| #  C  .  .  .  .  .  .  .  .  .  .  .  E  # |
+| #  C  C  C  O  C  C  C  C  k  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  A  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 40 / 300 ---
+
+Tempo: 40 | Segurando: Nada
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  A  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 41 / 300 ---
+
+Tempo: 41 | Segurando: Nada
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  A  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 42 / 300 ---
+
+Tempo: 42 | Segurando: Nada
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  A  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 43 / 300 ---
+
+Tempo: 43 | Segurando: Nada
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  A  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 44 / 300 ---
+
+Tempo: 44 | Segurando: Nada
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  A  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 45 / 300 ---
+
+Tempo: 45 | Segurando: Nada
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  A  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 46 / 300 ---
+
+Tempo: 46 | Segurando: Onion(RAW)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  A  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 47 / 300 ---
+
+Tempo: 47 | Segurando: Onion(RAW)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  A  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 48 / 300 ---
+
+Tempo: 48 | Segurando: Onion(RAW)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  A  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 49 / 300 ---
+
+Tempo: 49 | Segurando: Onion(RAW)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  A  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 50 / 300 ---
+
+Tempo: 50 | Segurando: Onion(RAW)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  A  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 51 / 300 ---
+
+Tempo: 51 | Segurando: Onion(RAW)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  A  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 52 / 300 ---
+
+Tempo: 52 | Segurando: Onion(RAW)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  A  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 53 / 300 ---
+
+Tempo: 53 | Segurando: Onion(RAW)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  A  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 54 / 300 ---
+
+Tempo: 54 | Segurando: Onion(RAW)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  A  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 55 / 300 ---
+
+Tempo: 55 | Segurando: Onion(RAW)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  A  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 56 / 300 ---
+
+Tempo: 56 | Segurando: Onion(RAW)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  A  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 57 / 300 ---
+
+Tempo: 57 | Segurando: Onion(RAW)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  A  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 58 / 300 ---
+
+Tempo: 58 | Segurando: Onion(RAW)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  A  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 59 / 300 ---
+
+Tempo: 59 | Segurando: Onion(RAW)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  A  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 60 / 300 ---
+
+Tempo: 60 | Segurando: Onion(RAW)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
 | #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
 | #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  D  .  .  .  .  .  .  .  .  A  .  .  G  # |
-| #  C  C  C  T  C  o  C  C  C  P  P  C  C  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
 +---------------------------------------------+
-Active Orders: ['Onion']
-  Station at (6, 9): Onion(CHOPPED) | Progress: 0 
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion], prog=0) | Progresso: 0
 
---- Step 30 ---
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
 
-Time: 30 | Holding: Plate(CLEAN)
+--- Step 61 / 300 ---
+
+Tempo: 61 | Segurando: Onion(RAW)
 +---------------------------------------------+
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
-| #  C  C  C  O  C  C  C  C  S  C  C  C  C  # |
-| #  C  .  .  .  .  .  .  .  .  .  .  .  E  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
-| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
-| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
-| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
-| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
-| #  D  .  .  .  .  .  .  .  .  A  .  .  G  # |
-| #  C  C  C  T  C  o  C  C  C  C  P  C  C  # |
-| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
-+---------------------------------------------+
-Active Orders: ['Onion']
-  Station at (6, 9): Onion(CHOPPED) | Progress: 0 
-
---- Step 31 ---
-
-Time: 31 | Holding: Plate(CLEAN)
-+---------------------------------------------+
-| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
-| #  C  C  C  O  C  C  C  C  S  C  C  C  C  # |
-| #  C  .  .  .  .  .  .  .  .  .  .  .  E  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
 | #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
 | #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  D  .  .  .  .  .  .  .  A  .  .  .  G  # |
-| #  C  C  C  T  C  o  C  C  C  C  P  C  C  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
 +---------------------------------------------+
-Active Orders: ['Onion']
-  Station at (6, 9): Onion(CHOPPED) | Progress: 0 
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion], prog=0) | Progresso: 0
 
---- Step 32 ---
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
 
-Time: 32 | Holding: Plate(CLEAN)
+--- Step 62 / 300 ---
+
+Tempo: 62 | Segurando: Onion(RAW)
 +---------------------------------------------+
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
-| #  C  C  C  O  C  C  C  C  S  C  C  C  C  # |
-| #  C  .  .  .  .  .  .  .  .  .  .  .  E  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
 | #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
 | #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  D  .  .  .  .  .  .  A  .  .  .  .  G  # |
-| #  C  C  C  T  C  o  C  C  C  C  P  C  C  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
 +---------------------------------------------+
-Active Orders: ['Onion']
-  Station at (6, 9): Onion(CHOPPED) | Progress: 0 
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion], prog=0) | Progresso: 0
 
---- Step 33 ---
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
 
-Time: 33 | Holding: Plate(CLEAN)
+--- Step 63 / 300 ---
+
+Tempo: 63 | Segurando: Onion(RAW)
 +---------------------------------------------+
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
-| #  C  C  C  O  C  C  C  C  S  C  C  C  C  # |
-| #  C  .  .  .  .  .  .  .  .  .  .  .  E  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
 | #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
 | #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  D  .  .  .  .  .  A  .  .  .  .  .  G  # |
-| #  C  C  C  T  C  o  C  C  C  C  P  C  C  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
 +---------------------------------------------+
-Active Orders: ['Onion']
-  Station at (6, 9): Onion(CHOPPED) | Progress: 0 
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion], prog=0) | Progresso: 0
 
---- Step 34 ---
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
 
-Time: 34 | Holding: Plate(CLEAN)
+--- Step 64 / 300 ---
+
+Tempo: 64 | Segurando: Onion(RAW)
 +---------------------------------------------+
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
-| #  C  C  C  O  C  C  C  C  S  C  C  C  C  # |
-| #  C  .  .  .  .  .  .  .  .  .  .  .  E  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
 | #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
 | #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  D  .  .  .  .  A  .  .  .  .  .  .  G  # |
-| #  C  C  C  T  C  o  C  C  C  C  P  C  C  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
 +---------------------------------------------+
-Active Orders: ['Onion']
-  Station at (6, 9): Onion(CHOPPED) | Progress: 0 
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion], prog=0) | Progresso: 0
 
---- Step 35 ---
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
 
-Time: 35 | Holding: Plate(WITH_FOOD)
+--- Step 65 / 300 ---
+
+Tempo: 65 | Segurando: Nada
 +---------------------------------------------+
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
-| #  C  C  C  O  C  C  C  C  S  C  C  C  C  # |
-| #  C  .  .  .  .  .  .  .  .  .  .  .  E  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
 | #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
 | #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  D  .  .  .  .  A  .  .  .  .  .  .  G  # |
-| #  C  C  C  T  C  T  C  C  C  C  P  C  C  # |
+| #  C  C  C  T  C  o  C  C  C  P  P  C  C  # |
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
 +---------------------------------------------+
-Active Orders: ['Onion']
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion], prog=0) | Progresso: 0
+  Estação em (6, 9): Onion(RAW) | Progresso: 0
 
---- Step 36 ---
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
 
-Time: 36 | Holding: Plate(WITH_FOOD)
+--- Step 66 / 300 ---
+
+Tempo: 66 | Segurando: Nada
 +---------------------------------------------+
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
-| #  C  C  C  O  C  C  C  C  S  C  C  C  C  # |
-| #  C  .  .  .  .  .  .  .  .  .  .  .  E  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
 | #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
 | #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
-| #  D  .  .  .  A  .  .  .  .  .  .  .  G  # |
-| #  C  C  C  T  C  T  C  C  C  C  P  C  C  # |
+| #  D  .  .  .  .  A  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  o  C  C  C  P  P  C  C  # |
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
 +---------------------------------------------+
-Active Orders: ['Onion']
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion], prog=0) | Progresso: 0
+  Estação em (6, 9): Onion(RAW) | Progresso: 1
 
---- Step 37 ---
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
 
-Time: 37 | Holding: Plate(WITH_FOOD)
+--- Step 67 / 300 ---
+
+Tempo: 67 | Segurando: Nada
 +---------------------------------------------+
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
-| #  C  C  C  O  C  C  C  C  S  C  C  C  C  # |
-| #  C  .  .  .  .  .  .  .  .  .  .  .  E  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
 | #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
 | #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
-| #  D  .  .  A  .  .  .  .  .  .  .  .  G  # |
-| #  C  C  C  T  C  T  C  C  C  C  P  C  C  # |
+| #  D  .  .  .  .  A  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  o  C  C  C  P  P  C  C  # |
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
 +---------------------------------------------+
-Active Orders: ['Onion']
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion], prog=0) | Progresso: 0
+  Estação em (6, 9): Onion(RAW) | Progresso: 2
 
---- Step 38 ---
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
 
-Time: 38 | Holding: Plate(WITH_FOOD)
+--- Step 68 / 300 ---
+
+Tempo: 68 | Segurando: Nada
 +---------------------------------------------+
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
-| #  C  C  C  O  C  C  C  C  S  C  C  C  C  # |
-| #  C  .  .  .  .  .  .  .  .  .  .  .  E  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
 | #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
 | #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
-| #  D  .  A  .  .  .  .  .  .  .  .  .  G  # |
-| #  C  C  C  T  C  T  C  C  C  C  P  C  C  # |
+| #  D  .  .  .  .  A  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  o  C  C  C  P  P  C  C  # |
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
 +---------------------------------------------+
-Active Orders: ['Onion']
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion], prog=0) | Progresso: 0
+  Estação em (6, 9): Onion(CHOPPED) | Progresso: 0
 
---- Step 39 ---
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
 
-Time: 39 | Holding: Plate(WITH_FOOD)
+--- Step 69 / 300 ---
+
+Tempo: 69 | Segurando: Onion(CHOPPED)
 +---------------------------------------------+
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
-| #  C  C  C  O  C  C  C  C  S  C  C  C  C  # |
-| #  C  .  .  .  .  .  .  .  .  .  .  .  E  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
 | #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
 | #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
-| #  D  A  .  .  .  .  .  .  .  .  .  .  G  # |
-| #  C  C  C  T  C  T  C  C  C  C  P  C  C  # |
+| #  D  .  .  .  .  A  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
 +---------------------------------------------+
-Active Orders: ['Onion']
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion], prog=0) | Progresso: 0
 
---- Step 40 ---
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
 
-Time: 40 | Holding: Nothing
+--- Step 70 / 300 ---
+
+Tempo: 70 | Segurando: Onion(CHOPPED)
 +---------------------------------------------+
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
-| #  P  C  C  O  C  C  C  C  S  C  C  C  C  # |
-| #  C  .  .  .  .  .  .  .  .  .  .  .  E  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  A  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 71 / 300 ---
+
+Tempo: 71 | Segurando: Onion(CHOPPED)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  A  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 72 / 300 ---
+
+Tempo: 72 | Segurando: Onion(CHOPPED)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  A  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 73 / 300 ---
+
+Tempo: 73 | Segurando: Onion(CHOPPED)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  A  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 74 / 300 ---
+
+Tempo: 74 | Segurando: Onion(CHOPPED)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  A  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 75 / 300 ---
+
+Tempo: 75 | Segurando: Onion(CHOPPED)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  A  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 76 / 300 ---
+
+Tempo: 76 | Segurando: Onion(CHOPPED)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  A  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 77 / 300 ---
+
+Tempo: 77 | Segurando: Onion(CHOPPED)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  A  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 78 / 300 ---
+
+Tempo: 78 | Segurando: Onion(CHOPPED)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  A  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 79 / 300 ---
+
+Tempo: 79 | Segurando: Onion(CHOPPED)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  A  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 80 / 300 ---
+
+Tempo: 80 | Segurando: Onion(CHOPPED)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  A  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
 | #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
 | #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
 | #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
-| #  D  A  .  .  .  .  .  .  .  .  .  .  G  # |
-| #  C  C  C  T  C  T  C  C  C  C  P  C  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
 | #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
 +---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 81 / 300 ---
+
+Tempo: 81 | Segurando: Onion(CHOPPED)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  A  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 82 / 300 ---
+
+Tempo: 82 | Segurando: Onion(CHOPPED)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  A  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 83 / 300 ---
+
+Tempo: 83 | Segurando: Nada
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  A  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion, Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 84 / 300 ---
+
+Tempo: 84 | Segurando: Nada
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  A  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion, Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 85 / 300 ---
+
+Tempo: 85 | Segurando: Nada
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  A  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion, Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 86 / 300 ---
+
+Tempo: 86 | Segurando: Nada
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  A  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion, Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 87 / 300 ---
+
+Tempo: 87 | Segurando: Nada
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  A  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion, Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 88 / 300 ---
+
+Tempo: 88 | Segurando: Nada
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  A  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion, Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 89 / 300 ---
+
+Tempo: 89 | Segurando: Onion(RAW)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  A  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion, Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 90 / 300 ---
+
+Tempo: 90 | Segurando: Onion(RAW)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  A  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion, Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 91 / 300 ---
+
+Tempo: 91 | Segurando: Onion(RAW)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  A  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion, Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 92 / 300 ---
+
+Tempo: 92 | Segurando: Onion(RAW)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  A  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion, Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 93 / 300 ---
+
+Tempo: 93 | Segurando: Onion(RAW)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  A  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion, Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 94 / 300 ---
+
+Tempo: 94 | Segurando: Onion(RAW)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  A  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion, Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 95 / 300 ---
+
+Tempo: 95 | Segurando: Onion(RAW)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  A  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion, Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 96 / 300 ---
+
+Tempo: 96 | Segurando: Onion(RAW)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  A  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion, Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 97 / 300 ---
+
+Tempo: 97 | Segurando: Onion(RAW)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  A  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion, Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 98 / 300 ---
+
+Tempo: 98 | Segurando: Onion(RAW)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  A  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion, Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 99 / 300 ---
+
+Tempo: 99 | Segurando: Onion(RAW)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  A  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion, Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 100 / 300 ---
+
+Tempo: 100 | Segurando: Onion(RAW)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  A  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion, Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 101 / 300 ---
+
+Tempo: 101 | Segurando: Onion(RAW)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  A  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion, Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 102 / 300 ---
+
+Tempo: 102 | Segurando: Onion(RAW)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  A  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion, Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 103 / 300 ---
+
+Tempo: 103 | Segurando: Onion(RAW)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  A  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion, Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 104 / 300 ---
+
+Tempo: 104 | Segurando: Onion(RAW)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  A  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion, Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 105 / 300 ---
+
+Tempo: 105 | Segurando: Onion(RAW)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  A  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion, Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 106 / 300 ---
+
+Tempo: 106 | Segurando: Onion(RAW)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  A  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion, Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 107 / 300 ---
+
+Tempo: 107 | Segurando: Onion(RAW)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  A  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion, Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 108 / 300 ---
+
+Tempo: 108 | Segurando: Nada
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  A  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  o  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion, Onion], prog=0) | Progresso: 0
+  Estação em (6, 9): Onion(RAW) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 109 / 300 ---
+
+Tempo: 109 | Segurando: Nada
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  A  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  o  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion, Onion], prog=0) | Progresso: 0
+  Estação em (6, 9): Onion(RAW) | Progresso: 1
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 110 / 300 ---
+
+Tempo: 110 | Segurando: Nada
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  A  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  o  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion, Onion], prog=0) | Progresso: 0
+  Estação em (6, 9): Onion(RAW) | Progresso: 2
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 111 / 300 ---
+
+Tempo: 111 | Segurando: Nada
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  A  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  o  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion, Onion], prog=0) | Progresso: 0
+  Estação em (6, 9): Onion(CHOPPED) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 112 / 300 ---
+
+Tempo: 112 | Segurando: Onion(CHOPPED)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  A  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion, Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 113 / 300 ---
+
+Tempo: 113 | Segurando: Onion(CHOPPED)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  A  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion, Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 114 / 300 ---
+
+Tempo: 114 | Segurando: Onion(CHOPPED)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  A  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion, Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 115 / 300 ---
+
+Tempo: 115 | Segurando: Onion(CHOPPED)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  A  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion, Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 116 / 300 ---
+
+Tempo: 116 | Segurando: Onion(CHOPPED)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  A  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion, Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 117 / 300 ---
+
+Tempo: 117 | Segurando: Onion(CHOPPED)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  A  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion, Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 118 / 300 ---
+
+Tempo: 118 | Segurando: Onion(CHOPPED)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  A  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion, Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 119 / 300 ---
+
+Tempo: 119 | Segurando: Onion(CHOPPED)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  A  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion, Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 120 / 300 ---
+
+Tempo: 120 | Segurando: Onion(CHOPPED)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  A  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion, Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 121 / 300 ---
+
+Tempo: 121 | Segurando: Onion(CHOPPED)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  A  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion, Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 122 / 300 ---
+
+Tempo: 122 | Segurando: Onion(CHOPPED)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  A  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion, Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 123 / 300 ---
+
+Tempo: 123 | Segurando: Onion(CHOPPED)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  A  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion, Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 124 / 300 ---
+
+Tempo: 124 | Segurando: Onion(CHOPPED)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  A  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion, Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 125 / 300 ---
+
+Tempo: 125 | Segurando: Onion(CHOPPED)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  f  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  A  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(FILLING, [Onion, Onion], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 126 / 300 ---
+
+Tempo: 126 | Segurando: Nada
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  c  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  A  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(COOKING, [Onion, Onion, Onion], prog=1) | Progresso: 1
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 127 / 300 ---
+
+Tempo: 127 | Segurando: Nada
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  c  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  A  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(COOKING, [Onion, Onion, Onion], prog=2) | Progresso: 2
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 128 / 300 ---
+
+Tempo: 128 | Segurando: Nada
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  c  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  A  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(COOKING, [Onion, Onion, Onion], prog=3) | Progresso: 3
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 129 / 300 ---
+
+Tempo: 129 | Segurando: Nada
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  c  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  A  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(COOKING, [Onion, Onion, Onion], prog=4) | Progresso: 4
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 130 / 300 ---
+
+Tempo: 130 | Segurando: Nada
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  c  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  A  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(COOKING, [Onion, Onion, Onion], prog=5) | Progresso: 5
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 131 / 300 ---
+
+Tempo: 131 | Segurando: Nada
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  c  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  A  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(COOKING, [Onion, Onion, Onion], prog=6) | Progresso: 6
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 132 / 300 ---
+
+Tempo: 132 | Segurando: Nada
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  R  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  A  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(READY, [Onion, Onion, Onion], prog=7) | Progresso: 7
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 133 / 300 ---
+
+Tempo: 133 | Segurando: Nada
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  R  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  A  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(READY, [Onion, Onion, Onion], prog=7) | Progresso: 7
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 134 / 300 ---
+
+Tempo: 134 | Segurando: Nada
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  R  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  A  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(READY, [Onion, Onion, Onion], prog=7) | Progresso: 7
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 135 / 300 ---
+
+Tempo: 135 | Segurando: Nada
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  R  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  A  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(READY, [Onion, Onion, Onion], prog=7) | Progresso: 7
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 136 / 300 ---
+
+Tempo: 136 | Segurando: Nada
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  R  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  A  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(READY, [Onion, Onion, Onion], prog=7) | Progresso: 7
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 137 / 300 ---
+
+Tempo: 137 | Segurando: Nada
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  R  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  A  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(READY, [Onion, Onion, Onion], prog=7) | Progresso: 7
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 138 / 300 ---
+
+Tempo: 138 | Segurando: Nada
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  R  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  A  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  P  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(READY, [Onion, Onion, Onion], prog=7) | Progresso: 7
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 139 / 300 ---
+
+Tempo: 139 | Segurando: Prato(CLEAN)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  R  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  A  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  C  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(READY, [Onion, Onion, Onion], prog=7) | Progresso: 7
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 140 / 300 ---
+
+Tempo: 140 | Segurando: Prato(CLEAN)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  R  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  A  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  C  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(READY, [Onion, Onion, Onion], prog=7) | Progresso: 7
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 141 / 300 ---
+
+Tempo: 141 | Segurando: Prato(CLEAN)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  R  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  A  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  C  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(READY, [Onion, Onion, Onion], prog=7) | Progresso: 7
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 142 / 300 ---
+
+Tempo: 142 | Segurando: Prato(CLEAN)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  R  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  A  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  C  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(READY, [Onion, Onion, Onion], prog=7) | Progresso: 7
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 143 / 300 ---
+
+Tempo: 143 | Segurando: Prato(CLEAN)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  R  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  A  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  C  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(READY, [Onion, Onion, Onion], prog=7) | Progresso: 7
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 144 / 300 ---
+
+Tempo: 144 | Segurando: Prato(CLEAN)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  R  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  A  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  C  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(READY, [Onion, Onion, Onion], prog=7) | Progresso: 7
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 145 / 300 ---
+
+Tempo: 145 | Segurando: Prato(CLEAN)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  R  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  A  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  C  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(READY, [Onion, Onion, Onion], prog=7) | Progresso: 7
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 146 / 300 ---
+
+Tempo: 146 | Segurando: Prato(CLEAN)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  R  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  A  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  C  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(READY, [Onion, Onion, Onion], prog=7) | Progresso: 7
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 147 / 300 ---
+
+Tempo: 147 | Segurando: Prato(CLEAN)
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  R  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  A  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  C  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(READY, [Onion, Onion, Onion], prog=7) | Progresso: 7
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 148 / 300 ---
+
+Tempo: 148 | Segurando: Prato(WITH_FOOD, [Onion, Onion, Onion])
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  k  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  A  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  C  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 149 / 300 ---
+
+Tempo: 149 | Segurando: Prato(WITH_FOOD, [Onion, Onion, Onion])
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  k  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  A  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  C  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 150 / 300 ---
+
+Tempo: 150 | Segurando: Prato(WITH_FOOD, [Onion, Onion, Onion])
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  k  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  A  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  C  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 151 / 300 ---
+
+Tempo: 151 | Segurando: Prato(WITH_FOOD, [Onion, Onion, Onion])
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  k  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  A  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  C  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 152 / 300 ---
+
+Tempo: 152 | Segurando: Prato(WITH_FOOD, [Onion, Onion, Onion])
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  k  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  A  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  C  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 153 / 300 ---
+
+Tempo: 153 | Segurando: Prato(WITH_FOOD, [Onion, Onion, Onion])
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  k  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  A  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  C  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 154 / 300 ---
+
+Tempo: 154 | Segurando: Prato(WITH_FOOD, [Onion, Onion, Onion])
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  k  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  A  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  C  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 155 / 300 ---
+
+Tempo: 155 | Segurando: Prato(WITH_FOOD, [Onion, Onion, Onion])
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  k  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  A  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  C  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 156 / 300 ---
+
+Tempo: 156 | Segurando: Prato(WITH_FOOD, [Onion, Onion, Onion])
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  k  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  A  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  C  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 157 / 300 ---
+
+Tempo: 157 | Segurando: Prato(WITH_FOOD, [Onion, Onion, Onion])
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  k  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  A  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  C  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 158 / 300 ---
+
+Tempo: 158 | Segurando: Prato(WITH_FOOD, [Onion, Onion, Onion])
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  k  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  A  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  C  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 159 / 300 ---
+
+Tempo: 159 | Segurando: Prato(WITH_FOOD, [Onion, Onion, Onion])
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  k  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  A  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  C  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 160 / 300 ---
+
+Tempo: 160 | Segurando: Prato(WITH_FOOD, [Onion, Onion, Onion])
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  k  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  A  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  C  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 161 / 300 ---
+
+Tempo: 161 | Segurando: Prato(WITH_FOOD, [Onion, Onion, Onion])
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  k  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  A  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  C  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 162 / 300 ---
+
+Tempo: 162 | Segurando: Prato(WITH_FOOD, [Onion, Onion, Onion])
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  k  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  A  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  C  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 163 / 300 ---
+
+Tempo: 163 | Segurando: Prato(WITH_FOOD, [Onion, Onion, Onion])
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  k  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  A  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  C  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 164 / 300 ---
+
+Tempo: 164 | Segurando: Prato(WITH_FOOD, [Onion, Onion, Onion])
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  C  C  C  O  C  C  C  C  k  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  A  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  C  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+Pedidos ativos: Sopa de Cebola
+  Estação em (9, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+--- Step 165 / 300 ---
+
+Tempo: 165 | Segurando: Nada
++---------------------------------------------+
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
+| #  P  C  C  O  C  C  C  C  k  C  C  C  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  C  .  .  .  .  .  .  .  .  .  .  .  W  # |
+| #  C  C  C  C  C  C  C  C  C  C  .  .  W  # |
+| #  .  .  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  A  .  .  .  .  .  .  .  .  .  .  C  # |
+| #  D  .  .  .  .  .  .  .  .  .  .  .  G  # |
+| #  C  C  C  T  C  T  C  C  C  P  C  C  C  # |
+| #  #  #  #  #  #  #  #  #  #  #  #  #  #  # |
++---------------------------------------------+
+  Estação em (9, 1): Panela(EMPTY, [], prog=0) | Progresso: 0
+
+Legenda: A=Agente, K=Panela(vazia), f=Panela(enchendo), c=Panela(cozinhando), R=Panela(pronta)
+         O=Fonte Cebola, V=Fonte Tomate, T/B=Tábua, S=Fogão, W=Pia, D=Entrega, G=Lixo
+
+[Simulação] Todos os pedidos entregues! Objetivo alcançado.

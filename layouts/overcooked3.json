@@ -1,24 +1,80 @@
 {
-  
   "layout": [
-    "###############",
-    "#...SCSCCDD.E.#",
-    "#.C....C......#",
-    "#.P..A.C......#",
-    "#.P....C......#",
-    "#.P....C......#",
-    "#.G....C......#",
-    "#.CTCTCCOOO...#",
-    "#.............#",
-    "###############"
+    "#############",
+    "#COCCKCCCPCC#",
+    "#CC.T.CCC...#",
+    "#....CCC....#",
+    "#....CCC....#",
+    "#CC.....WD..#",
+    "#CCCCCCCCCCC#",
+    "#############"
   ],
   "orders": [
     {
-      "ingredients": ["Onion"],
+      "ingredients": [
+        "Onion",
+        "Onion",
+        "Onion"
+      ],
       "instant": 0,
-      "duration": 50,
-      "score": 10
+      "duration": 200,
+      "score": 20,
+      "recipe": {
+        "name": "Onion Soup",
+        "steps": [
+          {
+            "ingredient": "Onion",
+            "required_state": "CHOPPED",
+            "quantity": 3
+          }
+        ]
+      }
+    },
+    {
+      "ingredients": [
+        "Tomato",
+        "Tomato",
+        "Tomato"
+      ],
+      "instant": 30,
+      "duration": 200,
+      "score": 20,
+      "recipe": {
+        "name": "Tomato Soup",
+        "steps": [
+          {
+            "ingredient": "Tomato",
+            "required_state": "CHOPPED",
+            "quantity": 3
+          }
+        ]
+      }
+    },
+    {
+      "ingredients": [
+        "Onion",
+        "Onion",
+        "Tomato"
+      ],
+      "instant": 60,
+      "duration": 200,
+      "score": 25,
+      "recipe": {
+        "name": "Mixed Soup",
+        "steps": [
+          {
+            "ingredient": "Onion",
+            "required_state": "CHOPPED",
+            "quantity": 2
+          },
+          {
+            "ingredient": "Tomato",
+            "required_state": "CHOPPED",
+            "quantity": 1
+          }
+        ]
+      }
     }
   ],
-  "max_steps": 100
+  "max_steps": 500
 }

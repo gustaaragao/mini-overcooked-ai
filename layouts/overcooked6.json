@@ -1,24 +1,107 @@
 {
-  
   "layout": [
-    "###############",
-    "#CCWWCCCPSPSPC#",
-    "#O...........C#",
-    "#O.A.........E#",
-    "#O...........D#",
-    "#C...........D#",
-    "#C............#",
-    "#G...........C#",
-    "#CCTCTCCSCSCOC#",
-    "###############"
+    "##################",
+    "#CCSSSCCCCPPPCCC##",
+    "#VC............C##",
+    "#OC...A........C##",
+    "#TC............C##",
+    "#GC............W##",
+    "#CCCC..........D##",
+    "####C..........C##",
+    "####CCCCCCCCCCCC##",
+    "##################"
   ],
   "orders": [
     {
-      "ingredients": ["Onion"],
+      "ingredients": [
+        "Bread",
+        "Meat"
+      ],
       "instant": 0,
-      "duration": 50,
-      "score": 10
+      "duration": 200,
+      "score": 15,
+      "recipe": {
+        "name": "Burger",
+        "steps": [
+          {
+            "ingredient": "Bread",
+            "required_state": "RAW",
+            "quantity": 1
+          },
+          {
+            "ingredient": "Meat",
+            "required_state": "COOKED",
+            "quantity": 1
+          }
+        ]
+      }
+    },
+    {
+      "ingredients": [
+        "Bread",
+        "Meat",
+        "Tomato"
+      ],
+      "instant": 50,
+      "duration": 200,
+      "score": 20,
+      "recipe": {
+        "name": "Tomato Burger",
+        "steps": [
+          {
+            "ingredient": "Bread",
+            "required_state": "RAW",
+            "quantity": 1
+          },
+          {
+            "ingredient": "Meat",
+            "required_state": "COOKED",
+            "quantity": 1
+          },
+          {
+            "ingredient": "Tomato",
+            "required_state": "CHOPPED",
+            "quantity": 1
+          }
+        ]
+      }
+    },
+    {
+      "ingredients": [
+        "Bread",
+        "Meat",
+        "Onion",
+        "Tomato"
+      ],
+      "instant": 100,
+      "duration": 200,
+      "score": 30,
+      "recipe": {
+        "name": "Complete Burger",
+        "steps": [
+          {
+            "ingredient": "Bread",
+            "required_state": "RAW",
+            "quantity": 1
+          },
+          {
+            "ingredient": "Meat",
+            "required_state": "COOKED",
+            "quantity": 1
+          },
+          {
+            "ingredient": "Onion",
+            "required_state": "CHOPPED",
+            "quantity": 1
+          },
+          {
+            "ingredient": "Tomato",
+            "required_state": "CHOPPED",
+            "quantity": 1
+          }
+        ]
+      }
     }
   ],
-  "max_steps": 100
+  "max_steps": 600
 }

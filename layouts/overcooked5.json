@@ -1,25 +1,57 @@
 {
-  
   "layout": [
-    "################",
-    "######C.DDEC####",
-    "#COOOCA...CWWCC#",
-    "#C............G#",
-    "#C.CCCCCCCCCC.C#",
-    "#C.C########C.C#",
-    "#C.C########C.C#",
-    "#C.CCCCCCCPPP.C#",
-    "#C............C#",
-    "#CTCTCCCCSCSCSC#",
-    "################"
+    "#################",
+    "#CCCSSKCCCPPPCC##",
+    "#VC...........C##",
+    "#OC...A.......C##",
+    "#TC...........C##",
+    "#TC...CCCCC...W##",
+    "#GC...C...C...D##",
+    "#CCCCCC...CCCCC##",
+    "#########.#######",
+    "#################"
   ],
   "orders": [
     {
-      "ingredients": ["Onion"],
+      "ingredients": [
+        "Onion",
+        "Onion",
+        "Onion"
+      ],
       "instant": 0,
-      "duration": 50,
-      "score": 10
+      "duration": 200,
+      "score": 20,
+      "recipe": {
+        "name": "Onion Soup",
+        "steps": [
+          {
+            "ingredient": "Onion",
+            "required_state": "CHOPPED",
+            "quantity": 3
+          }
+        ]
+      }
+    },
+    {
+      "ingredients": [
+        "Tomato",
+        "Tomato",
+        "Tomato"
+      ],
+      "instant": 30,
+      "duration": 200,
+      "score": 20,
+      "recipe": {
+        "name": "Tomato Soup",
+        "steps": [
+          {
+            "ingredient": "Tomato",
+            "required_state": "CHOPPED",
+            "quantity": 3
+          }
+        ]
+      }
     }
   ],
-  "max_steps": 100
+  "max_steps": 500
 }

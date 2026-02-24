@@ -1,14 +1,14 @@
 from typing import NamedTuple, Optional, Tuple, Union
 
-from models.entities import Order, Ingredient, Plate, Extinguisher
+from models.entities import Order, Ingredient, Plate, Extinguisher, Pot
 from models.states.station_state import StationState
 
-KitchenItem = Union[Ingredient, Plate, Extinguisher]
+KitchenItem = Union[Ingredient, Plate, Extinguisher, Pot]
 
 
 class KitchenState(NamedTuple):
     agent_pos: Tuple[int, int]
-    held_item: Optional[KitchenItem] # can be None
+    held_item: Optional[KitchenItem]
     layout: Tuple[str, ...] # Armazena o grid estático (W, ., C, D, etc)
     # Representado como ((x, y), KitchenItem) para itens dinâmicos sobre bancadas
     grid_objects: Tuple[Tuple[Tuple[int, int], KitchenItem], ...]
@@ -19,18 +19,7 @@ class KitchenState(NamedTuple):
     time: int = 0
 
     def _search_key(self):
-        """Key used for hashing/equality in search.
-
-        The simulator uses `time` for rendering and logs, but including it in
-        the state identity makes every step unique and prevents cycle
-        detection in graph search (A*, UCS, etc.). For planning we want the
-        state identity to depend on the physical configuration, not the tick
-        counter.
-        """
-        # Sort objects by position to ensure canonical representation
-        # grid_objects is ((pos, item), ...)
         sorted_objects = tuple(sorted(self.grid_objects, key=lambda x: x[0]))
-        # stations_state is ((pos, s_state), ...)
         sorted_stations = tuple(sorted(self.stations_state, key=lambda x: x[0]))
 
         return (
@@ -69,7 +58,6 @@ class KitchenState(NamedTuple):
         return None
 
     def is_impassable(self, x: int, y: int) -> bool:
-        """Returns True if the cell is impassable for movement (anything not floor '.')."""
         return self.get_layout_at(x, y) != '.'
 
     def __lt__(self, other):
