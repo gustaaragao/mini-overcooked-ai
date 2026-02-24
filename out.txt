@@ -1,0 +1,89 @@
+============================= test session starts ==============================
+platform linux -- Python 3.9.25, pytest-8.4.2, pluggy-1.6.0 -- /home/gustavo/ufs/mini-overcooked-ai/.venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /home/gustavo/ufs/mini-overcooked-ai
+configfile: pyproject.toml
+plugins: anyio-4.12.1
+collecting ... collected 3 items
+
+tests/test_problem.py::test_kitchen_problem_actions_movement FAILED      [ 33%]
+tests/test_problem.py::test_kitchen_problem_actions_interaction FAILED   [ 66%]
+tests/test_problem.py::test_kitchen_problem_result_pickup FAILED         [100%]
+
+=================================== FAILURES ===================================
+____________________ test_kitchen_problem_actions_movement _____________________
+
+    def test_kitchen_problem_actions_movement():
+        state = _create_simple_state()
+        problem = KitchenProblem(state)
+    
+        # Agent is at (2, 2)
+        # Available neighbors are:
+        # (2, 1) -> P (now "C" from initial state)
+        # (1, 2) -> " "
+        # (3, 2) -> " "
+        # (2, 3) -> O (Onion Source)
+        # Wait
+    
+        actions = problem.actions(state)
+    
+>       assert "Move(1, 2)" in actions
+E       AssertionError: assert 'Move(1, 2)' in ['PickUp(Onion, RAW, 2, 3)', 'PickUp(Plate, CLEAN, 2, 1)']
+
+tests/test_problem.py:35: AssertionError
+___________________ test_kitchen_problem_actions_interaction ___________________
+
+    def test_kitchen_problem_actions_interaction():
+        state = _create_simple_state()
+        problem = KitchenProblem(state)
+    
+        # Next to Onion source
+        actions = problem.actions(state)
+>       assert "PickUp((2, 3))" in actions  # The O is at (2, 3)
+E       AssertionError: assert 'PickUp((2, 3))' in ['PickUp(Onion, RAW, 2, 3)', 'PickUp(Plate, CLEAN, 2, 1)']
+
+tests/test_problem.py:47: AssertionError
+______________________ test_kitchen_problem_result_pickup ______________________
+
+    def test_kitchen_problem_result_pickup():
+        state = _create_simple_state()
+        problem = KitchenProblem(state)
+    
+        # Execute pickup
+>       new_state = problem.result(state, "PickUp((2, 3))")
+
+tests/test_problem.py:54: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <problems.kitchen_problem.KitchenProblem object at 0x7ba15d022e80>
+state = KitchenState(agent_pos=(2, 2), held_item=None, layout=('WWWWW', 'W C W', 'W . W', 'W O W', 'WWWWW'), grid_objects=(((2...gress=0, is_on_fire=False, content=None)), ((4, 4), StationState(progress=0, is_on_fire=False, content=None))), time=0)
+action = 'PickUp((2, 3))'
+
+    def result(self, state: KitchenState, action: str) -> KitchenState:
+        match = re.match(r"(\w+)\((.*)\)", action)
+        if not match:
+            return state._replace(time=state.time + 1)
+    
+        act_name, params_str = match.groups()
+        params = [p.strip() for p in params_str.split(",")]
+    
+        new_agent_pos = state.agent_pos
+        new_held_item = state.held_item
+        new_grid_objects = list(state.grid_objects)
+        new_delivered_orders = list(state.delivered_orders)
+        new_active_orders = list(state.active_orders)
+        new_stations_state = {pos: s_state for pos, s_state in state.stations_state}
+    
+        if act_name == "Move":
+            new_agent_pos = (int(params[0]), int(params[1]))
+    
+        elif act_name == "PickUp":
+>           pos = (int(params[2]), int(params[3]))
+E           IndexError: list index out of range
+
+problems/kitchen_problem.py:194: IndexError
+=========================== short test summary info ============================
+FAILED tests/test_problem.py::test_kitchen_problem_actions_movement - Asserti...
+FAILED tests/test_problem.py::test_kitchen_problem_actions_interaction - Asse...
+FAILED tests/test_problem.py::test_kitchen_problem_result_pickup - IndexError...
+============================== 3 failed in 0.06s ===============================

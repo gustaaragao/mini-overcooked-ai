@@ -1,0 +1,4 @@
+[tool.taskipy.tasks]
+test = "PYTHONPATH=. pytest tests/ -v"
+run = "python main.py"
+auto = "python main.py --auto"

@@ -82,17 +82,27 @@ pip install -r requirements.txt
 | Pacote | Versão |
 |--------|--------|
 | `aima3` | 1.0.11 |
+| `pytest` | 8.4.2 |
+| `taskipy` | 1.14.1 |
 
 > `aima3` fornece as classes base `Problem`, `Environment` e `Agent` utilizadas no projeto.
+> `pytest` é utilizado para executar os testes unitários da aplicação, enquanto `taskipy` ajuda na execução dos scripts e configurações pelo terminal de forma mais prática.
 
 ## Execução
+
+O projeto tem o [Taskipy](https://github.com/illBeRoy/taskipy) configurado (`pyproject.toml`) para encurtar comandos de rotina.
 
 ### Modo interativo (padrão)
 
 Limpa a tela a cada passo e aguarda tecla para avançar. Salva cada estado em `out/step_NNN.txt` e o log completo em `out/render.txt`.
 
+Usando taskipy:
 ```bash
-python main.py                          # Level 1-1 (padrão)
+task run                          # Level 1-1 (padrão)
+```
+
+Ou usando python diretamente:
+```bash
 python main.py layouts/overcooked2.json # Outro level
 ```
 
@@ -100,9 +110,21 @@ python main.py layouts/overcooked2.json # Outro level
 
 Executa sem interação. Gera apenas `out/render.txt`.
 
+Usando taskipy:
 ```bash
-python main.py --auto
+task auto
+```
+
+Ou usando python diretamente:
+```bash
 python main.py layouts/overcooked2.json --auto
+```
+
+### Testes
+Para realizar os testes de unidade implementados na pasta `tests/` use:
+
+```bash
+task test
 ```
 
 ## Receitas dos Levels
