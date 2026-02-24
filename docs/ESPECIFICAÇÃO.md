@@ -18,7 +18,7 @@ O ambiente é uma grade 2D representando uma cozinha. Cada célula pode conter (
 | `C`  | Balcão (armazenamento genérico) |
 | `S`  | Fogão (cozimento simples — 1 ingrediente) |
 | `T` / `B` | Tábua de Corte (preparação/corte) |
-| `K`  | **Panela** no fogão (cozimento multi-ingrediente — sopas) |
+| `K`  | Panela no fogão |
 | `D`  | Entrega |
 | `G`  | Lixeira (Usada para descartar ingredientes em estado `BURNT`) |
 | `E`  | Balcão com Extintor |
@@ -169,11 +169,3 @@ A heurística é admissível e estima o custo mínimo restante usando **distânc
 | 1-6 | Hambúrguer | Simples, com Tomate, Completo (cozinha maior) |
 
 ---
-
-# Arquitetura Ambiente - Agente - Programa de Agente
-
-O projeto mapeia perfeitamente a tríade conceitual proposta pelo livro AIMA:
-
-1. **Ambiente (`KitchenEnvironment`)**: Encapsula o motor físico da simulação, fornecendo o layout, posição dinâmica de objetos, estados de bancadas e propagação de fogo (`env/kitchen_env.py`). Fornece a matriz de *percepts* e executa o método `render()` a cada tick.
-2. **Agente (`KitchenAgent`)**: Entidade que absorve os *percepts* no método `__call__(percept)` e mantém a lista de `plan`.
-3. **Programa de Agente (`__call__`)**: Define uma função mapeadora. Na ausência de plano em cache, instancia explicitamente subclasses do `Problem` a partir do `percept`, dispara uma das funções de busca clássicas instanciando as estratégias via árvore e seleciona iterativamente os nós da fila prioritária para derivar `action = plan.pop(0)`. Este desenho comprova a adoção funcional dos preceitos de Russel e Norvig.

@@ -2,13 +2,7 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=python
 
 ### IDE ###
-.gemini
-GEMINI.md
-AGENTS.md
 .vscode/
-.opencode/
-.gemini/
-openspec/
 
 ### Python ###
 # Byte-compiled / optimized / DLL files

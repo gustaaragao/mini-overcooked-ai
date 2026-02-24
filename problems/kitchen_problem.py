@@ -358,7 +358,7 @@ class KitchenProblem(Problem):
             return c + 1.1
         return c + 1
 
-    # 
+    # Função de heurística
     def h(self, node):
         state = node.state
         if not state.active_orders:
@@ -439,7 +439,7 @@ class KitchenProblem(Problem):
 
         agent = (ax, ay)
 
-        # --- Incêndio
+        # Incêndio
         fire_positions = [pos for pos, st in state.stations_state if st.is_on_fire]
         if fire_positions:
             if isinstance(held, Extinguisher):
@@ -450,15 +450,15 @@ class KitchenProblem(Problem):
         if isinstance(held, Extinguisher):
             return best_dist(agent, extinguishers)
 
-        # --- Prato sujo na mão
+        # Prato sujo na mão
         if isinstance(held, Plate) and held.state == 'DIRTY':
             return best_dist(agent, sinks) + WASH_DURATION
 
-        # --- Prato com comida: entregar
+        # Prato com comida: entregar
         if isinstance(held, Plate) and held.state == 'WITH_FOOD':
             return best_dist(agent, deliveries)
 
-        # --- Receita usa panela (K)?
+        # Receita usa panela (K)?
         uses_pot = bool(pot_stations) and bool(needed_ingredients)
 
         if uses_pot:
@@ -479,7 +479,6 @@ class KitchenProblem(Problem):
                         remaining_cook = max(0, POT_COOK_DURATION - ss.progress)
                         return remaining_cook + best_dist(pot_pos, deliveries)
 
-                    # EMPTY or FILLING: still need more ingredients
                     already_in = list(pot.ingredients)
                     still_needed = list(needed_ingredients)
                     for ing in already_in:
@@ -496,7 +495,6 @@ class KitchenProblem(Problem):
                             cost = best_dist(agent, chop_stations) + CHOP_DURATION + best_dist(
                                 chop_stations[0] if chop_stations else agent, pot_pos)
                         else:
-                            # Walk to source for first needed ingredient
                             first_ing = still_needed[0]
                             sources = raw_sources_onion if first_ing == 'Onion' else raw_sources_tomato
                             cost = best_dist(agent, sources) + best_dist(
@@ -504,7 +502,6 @@ class KitchenProblem(Problem):
                             ) + CHOP_DURATION + best_dist(
                                 chop_stations[0] if chop_stations else agent, pot_pos
                             )
-                        # Each extra ingredient
                         for ing in still_needed[1:]:
                             sources = raw_sources_onion if ing == 'Onion' else raw_sources_tomato
                             cost += best_dist(agent, sources) + best_dist(
@@ -512,14 +509,12 @@ class KitchenProblem(Problem):
                             ) + CHOP_DURATION + best_dist(
                                 chop_stations[0] if chop_stations else agent, pot_pos
                             )
-                        # After filling: cook + serve + deliver
                         cost += POT_COOK_DURATION + best_dist(pot_pos, deliveries)
                         return cost
 
-                    # All ingredients in pot but not yet COOKING (shouldn't happen)
                     return POT_COOK_DURATION + best_dist(pot_pos, deliveries)
 
-        # --- Receita simples (sem panela, ou fallback)
+        # Receita simples (sem panela, ou fallback)
 
         if isinstance(held, Plate) and not held.contents:
             if chopped_food or cooked_food:
